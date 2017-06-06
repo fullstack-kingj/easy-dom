@@ -1,6 +1,6 @@
 # DOM 是个啥
 
-> **导读:** 
+> **导读:** 你将学习 DOM 是什么，DOM 的作用是什么，以及 DOM 节点树是什么等内容。
 
 ## 从名字说起
 
@@ -76,29 +76,16 @@ DOM 可以将上面的 HTML 页面表示为一个树形结构，如下图所示:
 
 节点（Node）原本的意思是表示网络中的连接点，是个网络术语。而在 DOM 树结构中，节点是构成树形结构的连接点。
 
-> DOM 树结构中提供了以下几种节点:
-
-| 节点类型 | 值 | 常量 | 描述 |
-| :---: | :---: | --- | --- |
-| 元素节点 | 1 | Node.ELEMENT_NODE | 例如 `<p>` 和 `<div>` |
-| 属性节点 | 2 | Node.ATTRIBUTE_NODE | 在 DOM4 规范里 Node 接口将不再实现这个元素属性 |
-| 文本节点 | 3 | Node.TEXT_NODE | Element 或者 Attr 中实际的文字 |
-| CDATASection | 4 | Node.CDATA_SECTION_NODE | 在 DOM4 规范里被移除 |
-| XML 实体引用节点 | 5 | Node.ENTITY_REFERENCE_NODE | 在 DOM4 规范里被移除 |
-| XML `<!ENTITY ...>`  节点 | 6 | Node.ENTITY_NODE | 在 DOM4 规范中被移除 |
-| XML ProcessingInstruction | 7 | Node.PROCESSING_INSTRUCTION_NODE | 例如 `<?xml-stylesheet ... ?>` 声明 |
-| Comment 节点 | 8 | Node.COMMENT_NODE | |
-| Document 节点 | 9 | Node.DOCUMENT_NODE | |
-| DocumentType 节点 | 10 | Node.DOCUMENT_TYPE_NODE | 例如 `<!DOCTYPE html>` 就是用于 HTML5 的 |
-| DocumentFragment 节点 | 11 | Node.DOCUMENT_FRAGMENT_NODE | |
-| XML <!NOTATION ...> 节点 | 12 | Node.NOTATION_NODE | |
-
 DOM 树结构中主要由以下 4 种节点组成:
 
-- 文档节点: 表示整个 HTML 页面（相当于 document 对象）。当需要访问任何标签、属性或文本时，都可以通过文档节点进行导航。
-- 元素节点: 表示 HTML 页面中的标签（即 HTML 页面的结构）。当访问 DOM 树时，需要从查找元素节点（标签）开始。
-- 文本节点: 表示 HTML 页面中的标签所包含的文本内容。
-- 属性节点: 表示 HTML 页面中的开始标签包含的属性。
+| 节点类型 | 描述 |
+| :---: | --- |
+| 文档节点 | 表示整个 HTML 页面（相当于 document 对象）。当需要访问任何标签、属性或文本时，都可以通过文档节点进行导航。|
+| 元素节点 | 表示 HTML 页面中的标签（即 HTML 页面的结构）。当访问 DOM 树时，需要从查找元素节点（标签）开始。|
+| 文本节点 | 表示 HTML 页面中的标签所包含的文本内容。|
+| 属性节点 | 表示 HTML 页面中的开始标签包含的属性。|
+
+> 更多有关节点类型的请参考: [节点类型文档](node-types.md)
 
 根据节点的分类，上面的 DOM 树结构就可以更详细的表示为如下示例:
 
@@ -138,3 +125,4 @@ console.log(EventTarget.prototype instanceof Object);
 
 ![](05-inheritance-relationships-of-objects.png)
 
+**[下一回](../02-dom-and-js/README.md)**
