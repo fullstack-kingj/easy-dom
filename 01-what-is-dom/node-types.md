@@ -41,4 +41,4 @@
 
 > 更多有关 [节点类型](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeType) 的内容
 
-**[返回](README.md)**
+**[返回](README.md#dom-中的节点)**
