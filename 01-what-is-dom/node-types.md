@@ -1,7 +1,7 @@
 # 节点类型
 
 |  常量 | 值 | 描述 |
-| --- | :---: | --- | --- |
+| --- | :---: | --- |
 | Node.ELEMENT_NODE | 1 | 例如 `<p>` 和 `<div>` |
 | Node.ATTRIBUTE_NODE | 2 | 在 DOM4 规范里 Node 接口将不再实现这个元素属性 |
 | Node.TEXT_NODE | 3 | Element 或者 Attr 中实际的文字 |
@@ -18,7 +18,7 @@
 # 在用的节点类型
 
 |  常量 | 值 | 描述 |
-| --- | :---: | --- | --- |
+| --- | :---: | --- |
 | Node.ELEMENT_NODE | 1 | 一个元素节点，例如 `<p>` 和 `<div>` |
 | Node.TEXT_NODE | 3 | Element 或者 Attr 中实际的文字 |
 | Node.PROCESSING_INSTRUCTION_NODE | 7 | 一个用于XML文档的 ProcessingInstruction，例如 `<?xml-stylesheet ... ?>` 声明 |
@@ -32,7 +32,7 @@
 > 以下常量已被弃用，请不要使用。
 
 |  常量 | 值 | 描述 |
-| --- | :---: | --- | --- |
+| --- | :---: | --- |
 | Node.ATTRIBUTE_NODE | 2 | 元素 的耦合属性 。在 DOM4 规范里 Node 接口将不再实现这个元素属性 |
 | Node.CDATA_SECTION_NODE | 4 | 一个 CDATASection。在 DOM4 规范里被移除 |
 | Node.ENTITY_REFERENCE_NODE | 5 | 一个 XML 实体引用节点。在 DOM4 规范里被移除 |
