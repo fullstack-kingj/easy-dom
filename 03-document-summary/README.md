@@ -133,8 +133,3 @@ console.log(Document.prototype instanceof EventTarget);
 ```
 
 Document 对象的属性和方法多是继承于 Node 对象和 EventTarget 对象的。当然，也有一部分属性和方法是实现了 HTMLDocument 接口的。
-
----
-本教程免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。
-
-本教程采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-nd/4.0/)进行许可。

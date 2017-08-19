@@ -7,7 +7,7 @@ Document 对象提供了属性和方法实现定位页面元素功能，这也�
 - getElementById()方法：通过页面元素的 id 属性值定位元素。- getElementsByName()方法：通过页面元素的 name 属性值定位元素。- getElementsByTagName()方法：通过页面元素的元素名定位元素。- getElementsByClassName()方法：通过页面元素的 class 属性值定位元素。- querySelector()方法：通过 CSS 选择器定位第一个匹配的元素。
 - querySelectorAll()方法：通过 CSS 选择器定位所有匹配的元素。接下来，我们就一一进行学习。
 
-### 通过元素的 ID 属性值定位元素HTML 页面元素的 id 属性的特点是唯一、不可重复的，所以通过这种方式定位的 HTML 页面元素也是唯一的。
+## 通过元素的 ID 属性值定位元素HTML 页面元素的 id 属性的特点是唯一、不可重复的，所以通过这种方式定位的 HTML 页面元素也是唯一的。
 
 其语法格式如下:
 
@@ -24,9 +24,7 @@ element = document.getElementById(id);
 var btn = document.getElementById('btn');// 获取定位元素的 class 属性值var className = btn.className;// 添加 animate 动画样式className += ' animate';// 将新的 class 属性值设置btn.className = className;
 ```上述代码通过 getElementById() 方法定位 HTML 页面中 id 属性值为 btn 的元素，并为其元素的 class 属性添加 animate 样式。
 
-> **完整示例代码请点击右边的链接:** [getElementById()方法完整示例代码](https://segmentfault.com/n/1330000010209051?token=e6ef7c26d6d8e62d21fe2be8c0b778ab)
-
-### 通过元素的 name 属性值定位元素其语法格式如下:
+## 通过元素的 name 属性值定位元素其语法格式如下:
 
 ```javascript
 elements = document.getElementsByName(name);
@@ -40,9 +38,7 @@ var elems = document.getElementsByName('btn');// 循环遍历所有元素for (
 
 上述代码通过 getElementsByName() 方法定位 HTML 页面中 name 属性值为 btn 的元素，并遍历所有得到的元素，为其元素的 class 属性添加 animate 样式。
 
-> **完整示例代码请点击右边的链接:** [getElementsByName()方法完整示例代码](https://segmentfault.com/n/1330000010209115?token=1831aa5cbab5a938ed470b8b2c1c6908)
-
-### 通过元素的元素名定位元素其语法格式如下:
+## 通过元素的元素名定位元素其语法格式如下:
 
 ```javascript
 elements = document.getElementsByTagName(name);
@@ -56,9 +52,7 @@ var elems = document.getElementsByTagName('button');// 循环遍历所有元素
 
 上述代码通过 getElementsByTagName() 方法定位 HTML 页面中元素名为 button 的元素，并遍历所有得到的元素，为其元素的 class 属性添加 animate 样式。
 
-> **完整示例代码请点击右边的链接:** [getElementsByTagName()方法完整示例代码](https://segmentfault.com/n/1330000010209126?token=255ac7c69be79f2c39e9cf2576b39501)
-
-### 通过元素的 class 属性值定位元素其语法格式如下:
+## 通过元素的 class 属性值定位元素其语法格式如下:
 
 ```javascript
 elements = document.getElementsByClassName(names);
@@ -76,15 +70,13 @@ var elems = document.getElementsByClassName('btn');// 循环遍历所有元素
 
 上述代码通过 getElementsByClassName() 方法定位 HTML 页面中 class 属性值为 btn 的元素，并遍历所有得到的元素，为其元素的 class 属性添加 animate 样式。
 
-> **完整示例代码请点击右边的链接:** [getElementsByClassName()方法完整示例代码](https://segmentfault.com/n/1330000010209178?token=f9ddd8e75c0c7e605bf570e9010c2aff)
-
 #### 兼容 IE 8 及之前版本的浏览器
 
 getElementsByClassName() 方法只支持 IE 9 版本及之后版本的浏览器。也就是说，该方法并不支持 IE 8 及之前版本的浏览器。
 
 下图是不同浏览器的不同版本对 getElementsByClassName() 方法的支持情况:
 
-**此处有图片**
+![](img/02.png)
 
 由于国内的生产环境中，依旧存在使用 IE 8 及之前版本浏览器的情况。所以，我们需要自定义 getElementsByClassName() 方法解决浏览器的兼容问题。
 
@@ -119,7 +111,7 @@ function getElementsByClassName(element, names) {    // 检测 getElementsByCla
         // 返回数组(所有包含指定样式名称的元素节点)        return result;    }}
 ```
 
-### 通过 CSS 选择器定位元素CSS 中的选择器可以很便利地定位 HTML 页面元素，DOM 的标准规范中也提供类似的方法。
+## 通过 CSS 选择器定位元素CSS 中的选择器可以很便利地定位 HTML 页面元素，DOM 的标准规范中也提供类似的方法。
 
 - querySelector(): 定位匹配选择器的第一个元素。
 - querySelectorAll(): 定位匹配选择器的所有元素。
@@ -140,8 +132,6 @@ var btn = document.querySelector(’#btn');// 获取定位元素的 class 属�
 
 上述代码通过 querySelector() 方法定位 HTML 页面中 id 属性值为 btn 的元素，并为其元素的 class 属性添加 animate 样式。
 
-> **完整示例代码请点击右边的链接:** [querySelector()方法完整示例代码](https://segmentfault.com/n/1330000010209480?token=3a491eb123a2eb0c9e5f55d580ad35b7)
-
 #### querySelectorAll() 方法
 
 其语法格式如下:
@@ -157,8 +147,6 @@ var elems = document.querySelectorAll('button');// 循环遍历所有元素for
 ```
 
 上述代码通过 querySelectorAll() 方法定位 HTML 页面中元素名为 button 的元素，并遍历所有得到的元素，为其元素的 class 属性添加 animate 样式。
-
-> **完整示例代码请点击右边的链接:** [querySelectorAll()方法完整示例代码](https://segmentfault.com/n/1330000010209497?token=903ad7e37db4e57b4208b737c21985f8)
 
 ## 节点集合 NodeListNodeList 是一组元素节点的集合，每个节点具有相应的索引值（从 0 开始的数字，类似于数组）。
 元素节点在 NodeList 集合中存储的顺序与它们在 HTML 页面中的顺序保持一致。
@@ -182,8 +170,6 @@ var elems = document.getElementsByTagName('button');console.log(elems.length);/
 
 > **值得注意的是:** 我们在第二次测试打印 button 元素的个数时，并没有重新定位 HTML 页面中的 button 元素。
 
-> **完整示例代码请点击右边的链接:** [动态 NodeList 集合完整示例代码](https://segmentfault.com/n/1330000010209572?token=64f562f26f2ae19e63c28bbea71956aa)
-
 ### 静态 NodeList 集合
 
 所谓静态 NodeList 集合，就是对文档对象模型的任何改动都不会影响集合的内容。querySelectorAll() 方法定位 HTML 页面元素所返回的 NodeList 集合就是静态 NodeList 集合。
@@ -197,8 +183,6 @@ var elems = document.querySelectorAll('button');console.log(elems.length);// �
 上述代码通过 querySelectorAll() 方法定位 HTML 页面中所有的 button 元素，测试打印 button 元素的个数是 3 个。
 
 然后，我们创建一个新的 button 元素，并且将其添加到 HTML 页面中，再测试打印 button 元素的个数依旧是 3 个。
-
-> **完整示例代码请点击右边的链接:** [静态 NodeList 集合完整示例代码](https://segmentfault.com/n/1330000010209605?token=bdf2bfe0b725882a8c89630f40d78676)
 
 ## 定位页面元素属性
 
@@ -214,8 +198,3 @@ console.log(document.title);
 console.log(document.links);
 console.log(document.images);
 ```
-
----
-本教程免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。
-
-本教程采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-nd/4.0/)进行许可。
