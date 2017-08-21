@@ -68,27 +68,27 @@ Node 对象提供的常见节点操作中，我们将学习如何实现复制（
 
 关于 Node 对象提供的属性和方法中，最后我们还要再学习其 textContent 属性，实现获取或设置指定节点的文本内容。
 
-> #### 第十四回 Element 介绍
+> #### 第十四回 [Element 介绍](14-element-summary/README.md)
 
 如果你已经看到了这里，说明你已经掌握了 DOM 标准规范中的两个核心对象 Document 和 Node 对象。接下来，我们将继续学习 DOM 中核心对象之一的 Element 对象。
 
-> #### 第十五回 DOM 元素树
+> #### 第十五回 [DOM 元素树](15-element-tree/README.md)
 
 在基于 DOM 树结构，我们已经掌握了什么是 DOM 节点树结构，以及节点之间的关系。在学习 Element 对象的具体用法之前，我们先来了解一下什么是元素树，以及元素之间的关系。
 
-> #### 第十六回 定位页面元素
+> #### 第十六回 [定位页面元素](16-location-element/README.md)
 
 Document 对象的主要应用之一就是定位 HTML 页面中的元素，而 Element 对象同样提供了类似的方法用于定位 HTML 页面中指定元素内的元素。
 
-> #### 第十七回 遍历元素
+> #### 第十七回 [遍历元素](17-traverse-elements/README.md)
 
 Node 对象提供的属性或方法实现了遍历节点，但实际操作中，会有空白节点问题。通过 Element 对象提供的属性或方法实现遍历元素。
 
-> #### 第十八回 属性操作
+> #### 第十八回 [属性操作](18-attributes-operate/README.md)
 
 Element 对象相对于 Node 对象更便捷地就是对属性的操作。
 
-> #### 第十九回 innerHTML 属性
+> #### 第十九回 [innerHTML 属性](19-innerhtml/README.md)
 
 有关 Element 对象提供的属性和方法，在最后我们还需要学习一个特殊的属性，就是 innerHTML 属性。
 
