@@ -92,6 +92,10 @@ Element 对象相对于 Node 对象更便捷地就是对属性的操作。
 
 有关 Element 对象提供的属性和方法，在最后我们还需要学习一个特殊的属性，就是 innerHTML 属性。
 
+> #### 第二十回 [获取内联样式](20-get-inline-style/README.md)
+
+HTML 页面定义样式分为内联样式和外联样式。DOM 操作 CSS 样式表，首先学习如何操作内联样式。
+
 ![](connection.png)
 
 ## 版权
