@@ -1,13 +1,19 @@
 ## 回顾什么是内联样式
 
-所谓内联样式，就是通过 HTML 页面元素的 style 属性为当前元素定义 CSS 样式。以下代码示例，就是通过 style 属性定义 CSS 内联样式:```html
+所谓内联样式，就是通过 HTML 页面元素的 style 属性为当前元素定义 CSS 样式。
+
+以下代码示例，就是通过 style 属性定义 CSS 内联样式:
+
+```html
 <p style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
 ```
 
 > **值得注意的是:**
 > 
 > - HTML 页面的结构与样式并没有有效分离
-> - 定义的 CSS 样式只针对当前元素有效## 获取内联样式
+> - 定义的 CSS 样式只针对当前元素有效
+
+## 获取内联样式
 
 由于设置内联样式的方式是利用 HTML 页面元素的 style 属性实现的，所以获取内联样式主要是依靠 DOM 中获取属性方式实现。
 
@@ -27,7 +33,12 @@ var value = element.getAttribute('style');
 我们可以通过以下示例代码，学习如何通过 getAttribute() 方法获取内联样式:
 
 ```html
-<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p><script>    var pElem = document.getElementById('p1');    var style = pElem.getAttribute('style');    console.log(style);</script>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+    var style = pElem.getAttribute('style');
+    console.log(style);
+</script>
 ```
 
 上述示例代码的输出结果如下:
@@ -41,13 +52,23 @@ var value = element.getAttribute('style');
 我们可以通过以下示例代码，学习如何通过 HTMLElement 对象的 style 属性获取内联样式:
 
 ```html
-<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p><script>    var pElem = document.getElementById('p1');    var style = pElem.style;    console.log(style);</script>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+    var style = pElem.style;
+    console.log(style);
+</script>
 ```
 
-上述示例代码，通过 style 属性会得到 CSSStyleDeclaration 对象，该对象表示一个 CSS 属性键值对的集合。## CSSStyleDeclaration 对象
+上述示例代码，通过 style 属性会得到 CSSStyleDeclaration 对象，该对象表示一个 CSS 属性键值对的集合。
+
+## CSSStyleDeclaration 对象
 
 通过 element.style 返回的是 CSSStyleDeclaration 对象。CSSStyleDeclaration 对象表示一个CSS属性键值对的集合。
-CSSStyleDeclaration 对象提供的属性和方法可以帮助我们获取 CSS 样式的具体内容。| 属性或方法 | 描述 |
+
+CSSStyleDeclaration 对象提供的属性和方法可以帮助我们获取 CSS 样式的具体内容。
+
+| 属性或方法 | 描述 |
 | --- | --- |
 | cssText | 声明块的文本内容。|
 | length | 属性的数量。|
@@ -56,10 +77,19 @@ var value = element.getAttribute('style');
 
 ### cssText 属性
 
-通过 element.style.cssText 属性获取 CSS 声明块的文本内容。我们可以通过以下示例代码，学习如何通过 cssText 属性获取 CSS 声明块的文本内容:
+通过 element.style.cssText 属性获取 CSS 声明块的文本内容。
+
+我们可以通过以下示例代码，学习如何通过 cssText 属性获取 CSS 声明块的文本内容:
 
 ```html
-<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p><script>    var pElem = document.getElementById('p1');    var styleDeclar = pElem.style;    var cssText = styleDeclar.cssText;    console.log(cssText);</script>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+
+    var styleDeclar = pElem.style;
+    var cssText = styleDeclar.cssText;
+    console.log(cssText);
+</script>
 ```
 
 上述示例代码的输出结果如下:
@@ -75,7 +105,17 @@ var value = element.getAttribute('style');
 我们可以通过以下示例代码，学习如何遍历 CSSStyleDeclaration 对象:
 
 ```html
-<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p><script>    var pElem = document.getElementById('p1');    var styleDeclar = pElem.style;    for ( var i=0; i<styleDeclar.length; i++ ){        var propertyName = styleDeclar.item(i);        var propertyValue = styleDeclar.getPropertyValue(propertyName);        console.log(propertyName + ' : ' + propertyValue);    }</script>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+
+    var styleDeclar = pElem.style;
+    for ( var i=0; i<styleDeclar.length; i++ ){
+        var propertyName = styleDeclar.item(i);
+        var propertyValue = styleDeclar.getPropertyValue(propertyName);
+        console.log(propertyName + ' : ' + propertyValue);
+    }
+</script>
 ```
 
 上述示例代码的输出结果如下:
@@ -88,10 +128,16 @@ var value = element.getAttribute('style');
 
 ### item() 方法
 
-通过 element.style.item(index) 获取 CSS 的样式属性名，这种方式也可以通过 element.style[index] 方式进行替换。换句话讲，这两种方式是等价的。我们可以通过以下示例代码，学习对比这两种方式:
+通过 element.style.item(index) 获取 CSS 的样式属性名，这种方式也可以通过 element.style[index] 方式进行替换。换句话讲，这两种方式是等价的。
+
+我们可以通过以下示例代码，学习对比这两种方式:
 
 ```javascript
-for ( var i=0; i<styleDeclar.length; i++ ){    var itemName = styleDeclar.item(i);    var styleName = pElem.style[i];    console.log('item()方法: ' + itemName, 'style[index]: ' + styleName);}
+for ( var i=0; i<styleDeclar.length; i++ ){
+    var itemName = styleDeclar.item(i);
+    var styleName = pElem.style[i];
+    console.log('item()方法: ' + itemName, 'style[index]: ' + styleName);
+}
 ```
 
 上述示例代码的输出结果如下:
@@ -100,10 +146,17 @@ for ( var i=0; i<styleDeclar.length; i++ ){    var itemName = styleDeclar.item(
 
 ### getPropertyValue() 方法
 
-通过 element.style.item.getPropertyValue() 获取 CSS 的样式属性值，这种方式也可以通过 element.style[propertyName] 方式进行替换。我们可以通过以下示例代码，学习对比这两种方式:
+通过 element.style.item.getPropertyValue() 获取 CSS 的样式属性值，这种方式也可以通过 element.style[propertyName] 方式进行替换。
+
+我们可以通过以下示例代码，学习对比这两种方式:
 
 ```javascript
-for ( var i=0; i<styleDeclar.length; i++ ){    var propertyName = styleDeclar.item(i);    var value1 = styleDeclar.getPropertyValue(propertyName);    var value2 = pElem.style[propertyName];    console.log('getPropertyValue()方法: ' + value1, 'style[attrName]: ' + value2);}
+for ( var i=0; i<styleDeclar.length; i++ ){
+    var propertyName = styleDeclar.item(i);
+    var value1 = styleDeclar.getPropertyValue(propertyName);
+    var value2 = pElem.style[propertyName];
+    console.log('getPropertyValue()方法: ' + value1, 'style[attrName]: ' + value2);
+}
 ```
 
 上述示例代码的输出结果如下:
@@ -112,13 +165,15 @@ for ( var i=0; i<styleDeclar.length; i++ ){    var propertyName = styleDeclar.i
 
 ### 属性链方式操作
 
-由于通过 element.style 返回的是 CSSStyleDeclaration 对象，所以我们也可以通过 element.style.attrName 的方式获取具体的样式属性的值。我们可以通过以下示例代码，学习这种获取方式:
+由于通过 element.style 返回的是 CSSStyleDeclaration 对象，所以我们也可以通过 element.style.attrName 的方式获取具体的样式属性的值。
+
+我们可以通过以下示例代码，学习这种获取方式:
 
 ```html
-<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p><script>    var pElem = document.getElementById('p1');    var style = pElem.style;    console.log(style.color);</script>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+    var style = pElem.style;
+    console.log(style.color);
+</script>
 ```
-
----
-本教程免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。
-
-本教程采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-nd/4.0/)进行许可。
