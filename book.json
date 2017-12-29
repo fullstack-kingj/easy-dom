@@ -1,0 +1,72 @@
+{
+	"title": "EASYDOM - 可能是最适合你的 DOM 课程",
+	"author": "全栈讲师-金云龙",
+	"language": "zh-hans",
+	"links": {
+	    "sidebar": {
+	        "作者的博客": "http://www.longestory.com"
+	    }
+	},
+	"plugins": [
+		"-lunr", 
+		"-search", 
+		"search-plus",
+		"github",
+		"github-buttons",
+		"-sharing", 
+		"sharing-plus",
+		"tbfed-pagefooter",
+		"expandable-chapters-small",
+		"donate"
+	],
+	"pluginsConfig": {
+	    "github": {
+	        "url": "https://github.com/jyl/easy-dom"
+	    },
+	    "github-buttons": {
+		    "buttons": [{
+		        "user": "jyl",
+		        "repo": "easy-dom",
+		        "type": "star",
+		        "size": "small",
+		        "count": true
+		    }]
+	    },
+        "sharing": {
+	        "douban": false,
+	        "facebook": false,
+	        "google": false,
+	        "hatenaBookmark": false,
+	        "instapaper": false,
+	        "line": false,
+	        "linkedin": true,
+	        "messenger": false,
+	        "pocket": false,
+	        "qq": true,
+	        "qzone": true,
+	        "stumbleupon": false,
+	        "twitter": false,
+	        "viber": false,
+	        "vk": false,
+	        "weibo": true,
+	        "whatsapp": false,
+	        "all": [
+	            "facebook", "google", "twitter",
+	            "weibo"
+	        ]
+	    },
+	    "tbfed-pagefooter": {
+	        "copyright":"Copyright &copy www.longestory.com 2017",
+	        "modify_label": "该文件修订时间：",
+	        "modify_format": "YYYY-MM-DD HH:mm:ss"
+	    },
+	    "donate": {
+	        "wechat": "images/weixin.png",
+	        "alipay": "images/zhifubao.png",
+	        "title": "",
+	        "button": "打赏",
+	        "alipayText": "支付宝打赏",
+	        "wechatText": "微信打赏"
+	    }
+	}
+}
