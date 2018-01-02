@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阻止默认行为</title>
+</head>
+<body>
+<a class="button" id="a" href="#">链接</a>
+<script>
+    var a = document.getElementById('a');
+    /*a.onclick = function(event){
+        if (event.preventDefault){
+            event.preventDefault();
+        }else{
+            event.returnValue = false;
+        }
+    }*/
+    a.onclick = function(event){
+        return false;
+    }
+    a.addEventListener('click',function () {
+        return false;
+    })
+</script>
+</body>
+</html>

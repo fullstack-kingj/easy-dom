@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE8及之前版本浏览器的事件对象</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" class="button">按钮</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.attachEvent('onclick',function(){
+        console.log(window.event);
+    });
+</script>
+</body>
+</html>

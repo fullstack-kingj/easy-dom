@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监听器的浏览器兼容解决方案</title>
+</head>
+<body>
+<script>
+    function bind(elem, event, callback){
+        // 判断是否存在 addEventListener
+        if (elem.addEventListener){
+            elem.addEventListener(event, callback, false);
+        }else{
+            elem.attachEvent('on' + event, callback);
+        }
+    }
+</script>
+</body>
+</html>

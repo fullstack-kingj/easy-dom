@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button class="button">按钮</button>
+    <button class="button">按钮</button>
+    <button class="button">按钮</button>
+</div>
+<script>
+    var btn = document.getElementById('parent');
+    btn.addEventListener('click', function(event){
+        if (event.target.nodeName === 'BUTTON'){
+            alert('我是一个链接.')
+        }
+    });
+</script>
+</body>
+</html>

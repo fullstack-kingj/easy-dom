@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSStyleDeclaration 对象</title>
+</head>
+<body>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+
+    var styleDeclar = pElem.style;
+
+    styleDeclar.setProperty('color','lightblue');
+
+    styleDeclar.removeProperty('font-weight');
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>替换节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取父节点
+    var parentNode = document.getElementById('parent');
+    // 创建新节点
+    var newChild = document.createElement('button');
+    newChild.setAttribute('class','button');
+    var text = document.createTextNode('A New Button');
+    newChild.appendChild(text);
+    // 获取子节点
+    var oldChild = document.getElementById('btn');
+    // 替换节点
+    parentNode.replaceChild(newChild, oldChild);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象的self属性</title>
+</head>
+<body>
+<script>
+    console.log(window == window.self);
+
+    if (window.top!=window.self) {
+        console.log("这个窗口不是最顶层窗口");
+    }else{
+        console.log("这个窗口是最顶层窗口");
+    }
+</script>
+</body>
+</html>

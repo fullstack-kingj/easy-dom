@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取子元素</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" name="btn" class="button">A Button</button>
+    <button id="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取所有子节点
+    var parentElem = document.getElementById('parent');
+    var children = parentElem.children;
+    console.log(children);
+
+    // 获取所有子节点的个数
+    var parentElem = document.getElementById('parent');
+    var count = parentElem.childElementCount;
+    console.log(count);
+
+    // 获取第一个子元素
+    var parentElem = document.getElementById('parent');
+    var firstElementChild = parentElem.firstElementChild;
+    console.log(firstElementChild);
+
+    // 获取前一个兄弟元素
+    var btn = document.getElementById('btn');
+    var previousElem = btn.previousElementSibling;
+    console.log(previousElem);
+
+    // 获取前一个兄弟元素
+    var btn = document.getElementById('btn');
+    var nextElem = btn.nextElementSibling;
+    console.log(nextElem);
+</script>
+</body>
+</html>

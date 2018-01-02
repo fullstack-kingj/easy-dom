@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSRuleList对象</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .button {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button animate">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var styleSheet = document.styleSheets[0];
+    var cssRuleList = styleSheet.cssRules;
+    for(var i=0; i<cssRuleList.length; i++){
+        var cssRule = cssRuleList[i];
+        console.log(cssRule);
+    }
+</script>
+</body>
+</html>

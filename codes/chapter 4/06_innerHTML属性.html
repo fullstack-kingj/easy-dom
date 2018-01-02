@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML属性</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var parent = document.getElementById('parent');
+    var content = parent.innerHTML;
+    console.log(content);
+
+    var parent = document.getElementById('parent');
+    parent.innerHTML = '<button name="btn" class="button animate">A Button</button>';
+
+    document.body.innerHTML = "";
+</script>
+</body>
+</html>

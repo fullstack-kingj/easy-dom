@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取指定元素的定位父元素</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #parent { position: relative; }
+    </style>
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    console.log(btn.offsetParent);
+</script>
+</body>
+</html>

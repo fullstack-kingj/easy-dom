@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听器的内存问题</title>
+</head>
+<body>
+<script>
+    var els = document.getElementsByTagName('*');
+
+    for(var i=0 ; i<els.length ; i++){
+        els[i].addEventListener("click", function(e){
+            console.log('你终于点中了我...');
+        }, false);
+    }
+
+    function processEvent(e){
+        console.log('你终于点中了我...');
+    }
+
+    for(var i=0 ; i<els.length ; i++){
+        els[i].addEventListener("click", processEvent, false});
+    }
+</script>
+</body>
+</html>

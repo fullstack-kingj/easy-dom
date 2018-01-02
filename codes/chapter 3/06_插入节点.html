@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取目标父节点
+    var parent = document.getElementById('parent');
+    // 创建新节点
+    var button = document.createElement('button');
+    button.setAttribute('class','button');
+    var text = document.createTextNode('A New Button');
+    button.appendChild(text);
+    // 将新节点添加到父节点中
+    parent.appendChild(button);
+
+    // 获取目标父节点
+    var parentElement = document.getElementById('parent');
+    // 创建新节点
+    var newElement = document.createElement('button');
+    newElement.setAttribute('class','button');
+    var text = document.createTextNode('A New Button');
+    newElement.appendChild(text);
+    // 获取目标节点
+    var referenceElement = document.getElementById('btn');
+    // 将新节点添加到父节点中
+    parentElement.insertBefore(newElement, referenceElement);
+</script>
+</body>
+</html>

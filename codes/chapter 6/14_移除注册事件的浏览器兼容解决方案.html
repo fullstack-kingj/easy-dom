@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移除注册事件的浏览器兼容解决方案</title>
+</head>
+<body>
+<script>
+    function unbind(elem, eventName, functionName){
+        if (elem.removeEventListener){
+            elem.removeEventListener(eventName, functionName);
+        } else {
+            elem.detachEvent('on'+eventName, functionName);
+        }
+    }
+</script>
+</body>
+</html>

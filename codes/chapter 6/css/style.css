@@ -1,0 +1,36 @@
+.button {
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: larger;
+    padding: 0.5em 1em;
+    border: rgb(0, 0, 0);
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.button-group {
+    letter-spacing: -0.31em;
+    text-rendering: optimizespeed;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.animate {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

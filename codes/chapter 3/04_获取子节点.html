@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取子节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取所有子节点
+    var parentNode = document.getElementById('parent');
+    var children = parentNode.childNodes;
+    console.log(children);
+
+    // getElementsByTagName() 方法获取所有子节点
+    var parentNode = document.getElementById('parent');
+    var children = parentNode.getElementsByTagName('button');
+    console.log(children);
+
+    // 获取第一个子节点
+    var parentNode = document.getElementById('parent');
+    //var firstChild = parentNode.firstChild;
+    var firstChild = parentNode.getElementsByTagName('button')[0];
+    console.log(firstChild);
+
+    // 获取最后一个子节点
+    var parentNode = document.getElementById('parent');
+    //var lastChild = parentNode.lastChild;
+    var children = parentNode.getElementsByTagName('button');
+    var lastChild = children[children.length-1];
+    console.log(lastChild);
+</script>
+</body>
+</html>

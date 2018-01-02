@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>取消事件冒泡</title>
+    <style>
+        #d1, #d2, #d3 {
+            cursor: pointer;
+        }
+        #d1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background: lightskyblue;
+        }
+        #d2 {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            position: absolute;
+            background: lightgreen;
+        }
+        #d3 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d2">
+        <div id="d3"></div>
+    </div>
+</div>
+<script>
+    var d1 = document.getElementById('d1');
+    d1.addEventListener('click',function(){
+        alert(this.id);
+    },false);
+    var d2 = document.getElementById('d2');
+    d2.addEventListener('click',function(){
+        alert(this.id);
+    },false);
+    var d3 = document.getElementById('d3');
+    d3.addEventListener('click',function(event){
+        alert(this.id);
+        event = event || window.event;
+        event.stopPropagation();
+    },false);
+</script>
+</body>
+</html>

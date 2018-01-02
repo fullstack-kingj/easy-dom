@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSStyleDeclaration 对象</title>
+</head>
+<body>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+
+    var styleDeclar = pElem.style;
+
+    var cssText = styleDeclar.cssText;
+    console.log(cssText);
+
+    for ( var i=0; i<styleDeclar.length; i++ ){
+        var propertyName = styleDeclar.item(i);
+        var propertyValue = styleDeclar.getPropertyValue(propertyName);
+        console.log(propertyName + ' : ' + propertyValue);
+    }
+
+    for ( var i=0; i<styleDeclar.length; i++ ){
+        var itemName = styleDeclar.item(i);
+        var styleName = pElem.style[i];
+        console.log('item()方法: ' + itemName, 'style[index]: ' + styleName);
+    }
+
+    for ( var i=0; i<styleDeclar.length; i++ ){
+        var propertyName = styleDeclar.item(i);
+        var value1 = styleDeclar.getPropertyValue(propertyName);
+        var value2 = pElem.style[propertyName];
+        console.log('getPropertyValue()方法: ' + value1, 'style[attrName]: ' + value2);
+    }
+</script>
+</body>
+</html>

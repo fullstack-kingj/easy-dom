@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建文本节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="group" class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取父级元素节点
+    var div = document.getElementById('group');
+    // 创建新的元素节点
+    var elem = document.createElement('button');
+    // 创建文本节点
+    var text = document.createTextNode('New Button');
+    // 将文本节点添加到新的元素节点
+    elem.appendChild(text);
+    // 将新的元素节点添加到父级元素节点
+    div.appendChild(elem);
+</script>
+</body>
+</html>

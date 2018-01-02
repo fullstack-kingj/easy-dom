@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>什么是事件</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" class="button">按钮</button>
+</div>
+<script>
+    // 1. 获取 HTML 页面中指定元素。
+    var btn = document.getElementById('btn');
+    // 2. 为指定元素绑定指定事件。
+    btn.onclick = function(){
+        // 3. 编写事件发生时的逻辑代码。
+        console.log('你终于点中了我...');
+    }
+</script>
+</body>
+</html>

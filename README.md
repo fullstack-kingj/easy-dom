@@ -98,7 +98,7 @@ HTML 页面定义样式分为内联样式和外联样式。DOM 操作 CSS 样式
 
 ## 反馈
 
-![](github-issue-feedback.gif)
+![](images/github-issue-feedback.gif)
 
 ![](images/connection.png)
 

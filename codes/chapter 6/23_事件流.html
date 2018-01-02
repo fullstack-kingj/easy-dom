@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件流</title>
+    <style>
+        #d1, #d2, #d3 {
+            cursor: pointer;
+        }
+        #d1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background: lightskyblue;
+        }
+        #d2 {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            position: absolute;
+            background: lightgreen;
+        }
+        #d3 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d2">
+        <div id="d3"></div>
+    </div>
+</div>
+<script>
+    function myClick(){
+        alert(this.id);
+    }
+    var d1 = document.getElementById('d1');
+    d1.addEventListener('click',myClick,false);
+    var d2 = document.getElementById('d2');
+    d2.addEventListener('click',myClick,false);
+    var d3 = document.getElementById('d3');
+    d3.addEventListener('click',myClick,false);
+</script>
+</body>
+</html>

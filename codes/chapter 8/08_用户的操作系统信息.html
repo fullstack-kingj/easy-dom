@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户的操作系统信息</title>
+</head>
+<body>
+<script>
+    if (/windows/i.test(ua)){
+        console.log('当前使用的是 Windows 操作系统');
+    }else if (/mac/i.test(ua)){
+        console.log('当前使用的是 Mac 操作系统');
+    }else if (/android/i.test(ua)){
+        console.log('当前使用的是 Android 操作系统');
+    }else if (/iphone/i.test(ua)){
+        console.log('当前使用的是 iPhone 操作系统');
+    }
+</script>
+</body>
+</html>

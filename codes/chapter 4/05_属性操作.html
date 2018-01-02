@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性操作</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    var className = btn.getAttribute('class');
+    console.log(className);
+
+    var btn = document.getElementById('btn');
+    var className = btn.getAttribute('class');
+    className += ' animate';
+    btn.setAttribute('class',className);
+
+    var btn = document.getElementById('btn');
+    btn.removeAttribute('class');
+
+    var btn = document.getElementById('btn');
+    var result = btn.hasAttribute('class');
+    console.log(result);
+
+    var btn = document.getElementById('btn');
+    var result = btn.hasAttributes();
+    console.log(result);
+</script>
+</body>
+</html>

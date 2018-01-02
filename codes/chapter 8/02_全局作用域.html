@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局作用域</title>
+</head>
+<body>
+<script>
+    var name = '金云龙';
+    window.job = '全栈讲师';
+    // 使用 delete 运算符进行删除
+    delete window.name;
+    delete window.job;
+    // 删除之后调用测试结果
+    console.log(window.name);
+    console.log(window.job);
+</script>
+</body>
+</html>

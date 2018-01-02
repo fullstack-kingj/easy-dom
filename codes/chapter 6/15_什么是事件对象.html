@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>什么是事件对象</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" class="button">按钮</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(event){
+        // event 就是事件对象
+        console.log(event);
+    });
+</script>
+</body>
+</html>

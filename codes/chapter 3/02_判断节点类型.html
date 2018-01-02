@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断节点类型</title>
+</head>
+<body>
+<button id="btn" title="this is button">按钮</button>
+<script>
+    // 获取元素节点
+    var elemNode = document.getElementById('btn');
+    // 获取属性节点
+    var attrNode = elemNode.getAttributeNode('title');
+    // 获取文本节点
+    var textNode = elemNode.firstChild;
+    // 测试元素节点的nodeName、nodeType和nodeValue
+    console.log('元素节点的nodeName: ' + elemNode.nodeName);
+    console.log('元素节点的nodeType: ' + elemNode.nodeType);
+    console.log('元素节点的nodeValue: ' + elemNode.nodeValue);
+    // 测试属性节点的nodeName、nodeType和nodeValue
+    console.log('属性节点的nodeName: ' + attrNode.nodeName);
+    console.log('属性节点的nodeType: ' + attrNode.nodeType);
+    console.log('属性节点的nodeValue: ' + attrNode.nodeValue);
+    // 测试文本节点的nodeName、nodeType和nodeValue
+    console.log('文本节点的nodeName: ' + textNode.nodeName);
+    console.log('文本节点的nodeType: ' + textNode.nodeType);
+    console.log('文本节点的nodeValue: ' + textNode.nodeValue);
+</script>
+</body>
+</html>

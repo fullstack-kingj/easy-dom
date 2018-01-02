@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getComputedStyle()方法</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .button {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button animate">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    var style = window.getComputedStyle(btn, null);
+    console.log(style.backgroundColor);
+
+    var style = btn.currentStyle;
+    console.log(style.backgroundColor);
+
+    function getStyle(elem, attrName){
+        // 判断 window.getComputedStyle() 方法是否存在
+        if (window.getComputedStyle){
+            return getComputedStyle(elem, null);
+        }else{
+            return elem.currentStyle[attrName];
+        }
+    }
+</script>
+</body>
+</html>
