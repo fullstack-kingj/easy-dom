@@ -17,7 +17,8 @@
 		"sharing-plus",
 		"tbfed-pagefooter",
 		"expandable-chapters-small",
-		"donate"
+		"donate",
+		"github-issue-feedback"
 	],
 	"pluginsConfig": {
 	    "github": {
@@ -67,6 +68,9 @@
 	        "button": "打赏",
 	        "alipayText": "支付宝打赏",
 	        "wechatText": "微信打赏"
-	    }
+		},
+		"github-issue-feedback": {
+            "repo": "jyl/easy-dom"
+        }
 	}
 }

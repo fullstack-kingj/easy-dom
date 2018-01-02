@@ -96,6 +96,10 @@ Element 对象相对于 Node 对象更便捷地就是对属性的操作。
 
 HTML 页面定义样式分为内联样式和外联样式。DOM 操作 CSS 样式表，首先学习如何操作内联样式。
 
+## 反馈
+
+![](github-issue-feedback.gif)
+
 ![](images/connection.png)
 
 ## 版权
