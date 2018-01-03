@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第七节 Element 对象的样式属性 · EASYDOM - 可能是最适合你的 DOM 课程</title>
+        <title>第五节 Location 对象 · EASYDOM - 可能是最适合你的 DOM 课程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../事件.md" />
+    <link rel="next" href="../45-timeout/" />
     
     
-    <link rel="prev" href="../25-set-class-attr/" />
+    <link rel="prev" href="../43-history-object/" />
     
 
     <style>
@@ -550,9 +550,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.7" data-path="./">
+        <li class="chapter " data-level="1.6.7" data-path="../26-element-style-attr/">
             
-                <a href="./">
+                <a href="../26-element-style-attr/">
             
                     
                     第七节 Element 对象的样式属性
@@ -841,9 +841,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.5" data-path="../44-location-object/">
+        <li class="chapter active" data-level="1.9.5" data-path="./">
             
-                <a href="../44-location-object/">
+                <a href="./">
             
                     
                     第五节 Location 对象
@@ -902,7 +902,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第七节 Element 对象的样式属性</a>
+        <a href=".." >第五节 Location 对象</a>
     </h1>
 </div>
 
@@ -917,88 +917,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Element &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E00;&#x7CFB;&#x5217;&#x6709;&#x5173;&#x6837;&#x5F0F;&#x7684;&#x5C5E;&#x6027;:</p>
-<ul>
-<li>clientHeight &#x548C; clientWidth &#x5C5E;&#x6027;</li>
-<li>scrollHeight &#x548C; scrollWidth &#x5C5E;&#x6027;</li>
-<li>scrollTop &#x548C; scrollLeft &#x5C5E;&#x6027;</li>
-</ul>
-<p>&#x7EE7;&#x627F;&#x4E8E; Element &#x5BF9;&#x8C61;&#x7684; HTMLElement &#x5BF9;&#x8C61;&#x540C;&#x6837;&#x63D0;&#x4F9B;&#x4E00;&#x7CFB;&#x5217;&#x6709;&#x5173;&#x6837;&#x5F0F;&#x7684;&#x5C5E;&#x6027;:</p>
-<ul>
-<li>offsetParent &#x5C5E;&#x6027;</li>
-<li>offsetHeight &#x548C; offsetWidth &#x5C5E;&#x6027;</li>
-<li>offsetTop &#x548C; offsetLeft &#x5C5E;&#x6027;</li>
-</ul>
-<h2 id="&#x5143;&#x7D20;&#x5185;&#x90E8;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;">&#x5143;&#x7D20;&#x5185;&#x90E8;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;</h2>
-<p>Element &#x5BF9;&#x8C61;&#x7684; clientWidth &#x548C; clientHeight &#x5C5E;&#x6027;&#x8868;&#x793A;&#x5143;&#x7D20;&#x5185;&#x90E8;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x50CF;&#x7D20;&#x3002;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x5305;&#x542B;&#x5185;&#x8FB9;&#x8DDD;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x542B;&#x6EDA;&#x52A8;&#x6761;&#x3001;&#x8FB9;&#x6846;&#x548C;&#x5916;&#x8FB9;&#x8DDD;&#x3002;</p>
-<p><img src="img/11.png" alt=""></p>
-<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x8BA1;&#x7B97; clientWidth &#x548C; clientHeight &#x5C5E;&#x6027;:</p>
-<pre><code>clientWidth = CSS &#x7684; width + CSS &#x7684; padding &#x2013; &#x6EDA;&#x52A8;&#x6761;&#x7684;&#x5BBD;&#x5EA6;&#xFF08;&#x5982;&#x679C;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF09;
-clientHeight = CSS &#x7684; height + CSS &#x7684; padding &#x2013; &#x6EDA;&#x52A8;&#x6761;&#x7684;&#x9AD8;&#x5EA6;&#xFF08;&#x5982;&#x679C;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF09;
-</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x6D4B;&#x8BD5; clientWidth &#x548C; clientHeight &#x5C5E;&#x6027;:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;d&apos;</span>);
-<span class="hljs-comment">// &#x83B7;&#x53D6; div &#x7684;&#x6837;&#x5F0F;</span>
-<span class="hljs-keyword">var</span> style = <span class="hljs-built_in">document</span>.styleSheets[<span class="hljs-number">0</span>].cssRules[<span class="hljs-number">0</span>].style;
-<span class="hljs-comment">// &#x8BA1;&#x7B97; clientWidth &#x5C5E;&#x6027;&#x7684;&#x503C;</span>
-<span class="hljs-keyword">var</span> clientWidth = <span class="hljs-built_in">parseInt</span>(style.width) + <span class="hljs-built_in">parseInt</span>(style.paddingLeft) + <span class="hljs-built_in">parseInt</span>(style.paddingRight);
-<span class="hljs-comment">// &#x6D4B;&#x8BD5;&#x6253;&#x5370; clientWidth = width + padding-left + padding-right</span>
-<span class="hljs-built_in">console</span>.log(div.clientWidth, clientWidth);
+                                <h1 id="location-&#x5BF9;&#x8C61;">Location &#x5BF9;&#x8C61;</h1>
+<p>Location &#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x5730;&#x5740;&#x3002;</p>
+<p>Location &#x5BF9;&#x8C61;&#x5F88;&#x7279;&#x522B;&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x5BF9;&#x8C61;&#x65E2;&#x662F; Window &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x53C8;&#x662F; Document &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.location == <span class="hljs-built_in">document</span>.location);<span class="hljs-comment">// true</span>
 </code></pre>
-<h2 id="&#x5185;&#x5BB9;&#x533A;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;">&#x5185;&#x5BB9;&#x533A;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;</h2>
-<p>Element &#x5BF9;&#x8C61;&#x7684; scrollWidth &#x5C5E;&#x6027;&#x8868;&#x793A;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x50CF;&#x7D20;&#x3002; scrollWidth &#x5C5E;&#x6027;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x533A;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x5BBD;&#x5EA6;&#x4E2D;&#x66F4;&#x5927;&#x7684;&#x90A3;&#x4E2A;&#x503C;&#x3002;</p>
-<p><img src="img/12.png" alt=""></p>
-<p>Element &#x5BF9;&#x8C61;&#x7684; scrollHeight &#x5C5E;&#x6027;&#x8868;&#x793A;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x50CF;&#x7D20;&#x3002;scrollHeight &#x5C5E;&#x6027;&#x5305;&#x542B; overflow &#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x5BFC;&#x81F4;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x5185;&#x5BB9;&#x533A;&#x3002;</p>
-<p><img src="img/13.png" alt=""></p>
-<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x6D4B;&#x8BD5; scrollWidth &#x548C; scrollHeight &#x5C5E;&#x6027;:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> div1 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;d1&apos;</span>);
-<span class="hljs-built_in">console</span>.log(div1.scrollWidth);
-
-<span class="hljs-keyword">var</span> div2 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;d2&apos;</span>);
-<span class="hljs-built_in">console</span>.log(div2.scrollHeight);
+<h2 id="history-&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;">History &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</h2>
+<p>Location &#x5BF9;&#x8C61;&#x4E0D;&#x4EC5;&#x5B58;&#x50A8;&#x4E86;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x89E3;&#x6790;&#x529F;&#x80FD;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684; Location &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>&#x8FD4;&#x56DE;&#x670D;&#x52A1;&#x5668;&#x540D;&#x79F0;&#x548C;&#x7AEF;&#x53E3;&#x53F7;</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>&#x8FD4;&#x56DE;&#x670D;&#x52A1;&#x5668;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>href</td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#x7684;&#x5B8C;&#x6574; URL</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x4E2D;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td>port</td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x4E2D;&#x7684;&#x7AEF;&#x53E3;&#x53F7;</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>&#x8FD4;&#x56DE;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x7684;&#x7F51;&#x7EDC;&#x534F;&#x8BAE;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x5730;&#x5740;">&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x5730;&#x5740;</h3>
+<p>&#x901A;&#x8FC7;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x7684;&#x5730;&#x5740;&#x680F;&#x4FE1;&#x606F;console.log(&apos;Location&#x5BF9;&#x8C61;&#x4E3A;: &apos; + window.location);// &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x7684;&#x5730;&#x5740;&#x680F;&#x4FE1;&#x606F;window.location = &apos;http://www.baidu.com&apos;;</span>
 </code></pre>
-<h2 id="&#x6EDA;&#x52A8;&#x6761;&#x6EDA;&#x52A8;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;">&#x6EDA;&#x52A8;&#x6761;&#x6EDA;&#x52A8;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;</h2>
-<p>Element &#x5BF9;&#x8C61;&#x7684; scrollLeft &#x5C5E;&#x6027;&#x8868;&#x793A;&#x6EDA;&#x52A8;&#x6761;&#x5230;&#x5143;&#x7D20;&#x5DE6;&#x8FB9;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x50CF;&#x7D20;&#x3002;scrollLeft &#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;</p>
-<p><img src="img/14.png" alt=""></p>
-<p>Element &#x5BF9;&#x8C61;&#x7684; scrollTop &#x5C5E;&#x6027;&#x8868;&#x793A;&#x6EDA;&#x52A8;&#x6761;&#x5230;&#x5143;&#x7D20;&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x50CF;&#x7D20;&#x3002;scrollHeight &#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;</p>
-<p><img src="img/15.png" alt=""></p>
-<h2 id="&#x5224;&#x65AD;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x6EDA;&#x52A8;&#x5230;&#x5E95;">&#x5224;&#x65AD;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x6EDA;&#x52A8;&#x5230;&#x5E95;</h2>
-<p>&#x5982;&#x679C;&#x5143;&#x7D20;&#x5185;&#x5BB9;&#x6EDA;&#x52A8;&#x5230;&#x5E95;&#x7684;&#x8BDD;&#xFF0C;&#x5982;&#x4E0B;&#x7B49;&#x5F0F;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x4E3A; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4E3A; false:</p>
-<pre><code>element.scrollHeight - element.scrollTop === element.clientHeight
-</code></pre><p><img src="img/16.png" alt=""></p>
-<h2 id="&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x7236;&#x5143;&#x7D20;">&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x7236;&#x5143;&#x7D20;</h2>
-<p>Element &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684; offsetParent &#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x6700;&#x8FD1;&#x7684;&#x5305;&#x542B;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x3002;&#x5176;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x5982;&#x4E0B;:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> parentObj = element.offsetParent;
+<p>&#x4E0A;&#x8FF0;&#x529F;&#x80FD;&#x6211;&#x4EEC;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Location &#x5BF9;&#x8C61;&#x7684; href &#x5C5E;&#x6027;&#x5B8C;&#x6210;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x7684;&#x5730;&#x5740;&#x680F;&#x4FE1;&#x606F;console.log(&apos;Location&#x5BF9;&#x8C61;&#x7684;href&#x5C5E;&#x6027;&#x4E3A;: &apos; + location.href);// &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x7684;&#x5730;&#x5740;&#x680F;&#x4FE1;&#x606F;location.href = &apos;http://www.baidu.com&apos;;</span>
 </code></pre>
-<p>&#x4E0A;&#x8FF0;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#x7684; parentObj &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x6700;&#x8FD1;&#x7684;&#x5305;&#x542B;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x3002;</p>
-<blockquote>
-<p><strong>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;:</strong> &#x5982;&#x679C;&#x7956;&#x5148;&#x5143;&#x7D20;&#x4E2D;&#x6CA1;&#x6709;&#x5F00;&#x59CB;&#x5B9A;&#x4F4D;&#xFF0C;&#x5219; offsetParent &#x4E3A; body &#x5143;&#x7D20;&#x3002;</p>
-</blockquote>
-<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60; offsetParent &#x5C5E;&#x6027;&#x7684;&#x4F7F;&#x7528;:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    <span class="hljs-selector-id">#parent</span> { <span class="hljs-attribute">position</span>: relative; }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-keyword">var</span> btn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;btn&apos;</span>);
-    <span class="hljs-built_in">console</span>.log(btn.offsetParent);
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<h3 id="&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;">&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;</h3>
+<p>Location &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86; search &#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x4E8E;&#x8FD4;&#x56DE; URL &#x5305;&#x542B;&#x7684;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getQueryStringArgs</span>(<span class="hljs-params"></span>)</span>{    <span class="hljs-keyword">var</span> qs = location.search.length &gt; <span class="hljs-number">0</span> ? location.search.substring(<span class="hljs-number">1</span>) : <span class="hljs-string">&apos;&apos;</span>;    <span class="hljs-keyword">var</span> args = {};    <span class="hljs-keyword">var</span> items = qs.length ? qs.split(<span class="hljs-string">&apos;&amp;&apos;</span>) : [];    <span class="hljs-keyword">var</span> item = <span class="hljs-literal">null</span>, name = <span class="hljs-literal">null</span>, value = <span class="hljs-literal">null</span>, i = <span class="hljs-number">0</span>, len = items.length;    <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;len; i++) {        item = items[i].split(<span class="hljs-string">&apos;=&apos;</span>);        name = <span class="hljs-built_in">decodeURIComponent</span>(item[<span class="hljs-number">0</span>]);        value = <span class="hljs-built_in">decodeURIComponent</span>(item[<span class="hljs-number">1</span>]);        <span class="hljs-keyword">if</span> (name.length) {            args[name] = value;        }    }    <span class="hljs-keyword">return</span> args;}
 </code></pre>
-<h3 id="offsetparent-&#x5C5E;&#x6027;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x6027;">offsetParent &#x5C5E;&#x6027;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x6027;</h3>
-<p>&#x5728;&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9; offsetParent &#x5C5E;&#x6027;&#x7684;&#x652F;&#x6301;&#x60C5;&#x51B5;&#x4E5F;&#x6709;&#x6240;&#x4E0D;&#x540C;:</p>
-<ul>
-<li>&#x5728; Webkit &#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5143;&#x7D20;&#x4E3A;&#x9690;&#x85CF;&#x7684;&#xFF08;&#x8BE5;&#x5143;&#x7D20;&#x6216;&#x5176;&#x7956;&#x5148;&#x5143;&#x7D20;&#x7684; style.display &#x4E3A; &quot;none&quot;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x8BE5;&#x5143;&#x7D20;&#x7684; style.position&#x88AB;&#x8BBE;&#x4E3A; &quot;fixed&quot;&#xFF0C;&#x5219;&#x8BE5;&#x5C5E;&#x6027;&#x8FD4;&#x56DE; null&#x3002;</li>
-<li>&#x5728; IE 9 &#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x5143;&#x7D20;&#x7684; style.position &#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; &quot;fixed&quot;&#xFF0C;&#x5219;&#x8BE5;&#x5C5E;&#x6027;&#x8FD4;&#x56DE; null&#x3002;&#xFF08;display:none &#x65E0;&#x5F71;&#x54CD;&#x3002;&#xFF09;</li>
-</ul>
-<h3 id="&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x76F8;&#x5173;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x76F8;&#x5173;&#x5C5E;&#x6027;</h3>
-<p>&#x4E0E;&#x5F00;&#x542F;&#x5B9A;&#x4F4D;&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;&#x8FD8;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;:</p>
-<ul>
-<li>&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684; offsetWidth &#x548C; offsetHeight &#x5C5E;&#x6027;&#x5206;&#x522B;&#x8868;&#x793A;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x5E03;&#x5C40;&#x5BBD;&#x5EA6;&#x548C;&#x5E03;&#x5C40;&#x9AD8;&#x5EA6;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8FB9;&#x6846;&#x3001;&#x5185;&#x8FB9;&#x8DDD;&#x3001;&#x6EDA;&#x52A8;&#x6761;&#x548C; CSS &#x8BBE;&#x7F6E;&#x7684;&#x5BBD;&#x5EA6;&#x6216;&#x9AD8;&#x5EA6;&#x7684;&#x503C;&#x3002;</li>
-<li>&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684; offsetLeft &#x548C; offsetTop &#x5C5E;&#x6027;&#x5206;&#x522B;&#x8868;&#x793A;&#x8BE5;&#x5143;&#x7D20;&#x8DDD;&#x79BB;&#x5B9A;&#x4F4D;&#x7236;&#x5143;&#x7D20;&#x5DE6;&#x8FB9;&#x754C;&#x548C;&#x4E0A;&#x8FB9;&#x754C;&#x7684;&#x8DDD;&#x79BB;&#x3002;</li>
-</ul>
-<blockquote>
-<p><strong>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;:</strong> offsetWidth&#x3001;offsetHeight&#x3001;offsetLeft &#x548C; offsetTop &#x5C5E;&#x6027;&#x7684;&#x503C;&#x90FD;&#x662F;&#x6574;&#x6570;&#x3002; </p>
-</blockquote>
+<h2 id="history-&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;">History &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;</h2>
+<p>Location &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>&#x8F7D;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x4F5C;&#x7528;&#x548C;&#x76F4;&#x63A5;&#x4FEE;&#x6539; location &#x76F8;&#x540C;</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x5F53;&#x524D;&#x6587;&#x6863;&#xFF0C;&#x4F5C;&#x7528;&#x548C;&#x5237;&#x65B0;&#x6309;&#x94AE;&#x4E00;&#x6837;&#x3002;&#x53C2;&#x6570;&#x4E3A; true &#x65F6;&#xFF0C;&#x5219;&#x4F1A;&#x5F3A;&#x5236;&#x6E05;&#x7A7A;&#x7F13;&#x5B58;&#x5237;&#x65B0;&#x9875;&#x9762;</td>
+<td>replace()</td>
+<td>&#x7528;&#x65B0;&#x7684;&#x6587;&#x6863;&#x66FF;&#x6362;&#x5F53;&#x524D;&#x6587;&#x6863;&#xFF08;&#x4E0D;&#x4F1A;&#x751F;&#x6210;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x56DE;&#x9000;&#x6309;&#x94AE;&#x56DE;&#x9000;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; www.longestory.com 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2017-09-19 22:12:10
+2018-01-03 22:24:16
 </span></footer>
                                 
                                 </section>
@@ -1026,12 +1020,12 @@ clientHeight = CSS &#x7684; height + CSS &#x7684; padding &#x2013; &#x6EDA;&#x52
 
             
                 
-                <a href="../25-set-class-attr/" class="navigation navigation-prev " aria-label="Previous page: 第六节 设置 class 属性">
+                <a href="../43-history-object/" class="navigation navigation-prev " aria-label="Previous page: 第四节 History 对象">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../事件.md" class="navigation navigation-next " aria-label="Next page: 第六章 事件">
+                <a href="../45-timeout/" class="navigation navigation-next " aria-label="Next page: 第六节 定时器">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1042,7 +1036,7 @@ clientHeight = CSS &#x7684; height + CSS &#x7684; padding &#x2013; &#x6EDA;&#x52
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第七节 Element 对象的样式属性","level":"1.6.7","depth":2,"next":{"title":"第六章 事件","level":"1.7","depth":1,"path":"事件.md","ref":"事件.md","articles":[{"title":"第一节 什么是事件","level":"1.7.1","depth":2,"path":"27-what-is-event/README.md","ref":"27-what-is-event/README.md","articles":[]},{"title":"第二节 注册事件","level":"1.7.2","depth":2,"path":"28-register-event/README.md","ref":"28-register-event/README.md","articles":[]},{"title":"第三节 移除注册事件","level":"1.7.3","depth":2,"path":"29-remove-register-event/README.md","ref":"29-remove-register-event/README.md","articles":[]},{"title":"第四节 Event 事件对象","level":"1.7.4","depth":2,"path":"30-event-object/README.md","ref":"30-event-object/README.md","articles":[]},{"title":"第五节 获取目标元素","level":"1.7.5","depth":2,"path":"31-get-target-element/README.md","ref":"31-get-target-element/README.md","articles":[]},{"title":"第六节 阻止默认行为","level":"1.7.6","depth":2,"path":"32-prevent-default/README.md","ref":"32-prevent-default/README.md","articles":[]},{"title":"第七节 获取鼠标坐标","level":"1.7.7","depth":2,"path":"33-mouse-coordinate/README.md","ref":"33-mouse-coordinate/README.md","articles":[]},{"title":"第八节 事件流","level":"1.7.8","depth":2,"path":"34-event-flow/README.md","ref":"34-event-flow/README.md","articles":[]},{"title":"第九节 事件委托","level":"1.7.9","depth":2,"path":"35-event-delegate/README.md","ref":"35-event-delegate/README.md","articles":[]}]},"previous":{"title":"第六节 设置 class 属性","level":"1.6.6","depth":2,"path":"25-set-class-attr/README.md","ref":"25-set-class-attr/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","github-buttons","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","donate","github-issue-feedback"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.longestory.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github-issue-feedback":{"repo":"jyl/easy-dom"},"github":{"url":"https://github.com/jyl/easy-dom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"images/zhifubao.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"images/weixin.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"全栈讲师-金云龙","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"EASYDOM - 可能是最适合你的 DOM 课程","language":"zh-hans","links":{"sidebar":{"作者的博客":"http://www.longestory.com"}},"gitbook":"*"},"file":{"path":"26-element-style-attr/README.md","mtime":"2017-09-19T14:12:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-03T14:26:55.289Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第五节 Location 对象","level":"1.9.5","depth":2,"next":{"title":"第六节 定时器","level":"1.9.6","depth":2,"path":"45-timeout/README.md","ref":"45-timeout/README.md","articles":[]},"previous":{"title":"第四节 History 对象","level":"1.9.4","depth":2,"path":"43-history-object/README.md","ref":"43-history-object/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","github-buttons","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","donate","github-issue-feedback"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.longestory.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github-issue-feedback":{"repo":"jyl/easy-dom"},"github":{"url":"https://github.com/jyl/easy-dom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"images/zhifubao.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"images/weixin.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"全栈讲师-金云龙","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"EASYDOM - 可能是最适合你的 DOM 课程","language":"zh-hans","links":{"sidebar":{"作者的博客":"http://www.longestory.com"}},"gitbook":"*"},"file":{"path":"44-location-object/README.md","mtime":"2018-01-03T14:24:16.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-03T14:26:55.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

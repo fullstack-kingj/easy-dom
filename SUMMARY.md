@@ -50,8 +50,8 @@
 * [第八章 BOM](BOM.md)
     * [第一节 BOM 是什么](40-what-is-bom/README.md)
     * [第二节 Window 对象](41-window-object/README.md)
-    * [第三节 Navigator 对象](/README.md)
-    * [第四节 History 对象](/README.md)
-    * [第五节 Location 对象](/README.md)
-    * [第六节 定时器](/README.md)
+    * [第三节 Navigator 对象](42-navigator-object/README.md)
+    * [第四节 History 对象](43-history-object/README.md)
+    * [第五节 Location 对象](44-location-object/README.md)
+    * [第六节 定时器](45-timeout/README.md)
 
