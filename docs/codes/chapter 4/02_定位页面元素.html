@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位页面元素</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var parent = document.getElementById('parent');
+    // 通过元素的元素名定位元素
+    var elems = parent.getElementsByTagName('button');
+    // 循环遍历所有元素
+    for (var i=0; i<elems.length; i++) {
+        var elem = elems[i];
+        // 获取定位元素的 class 属性值
+        var className = elem.className;
+        // 添加 animate 动画样式
+        className += ' animate';
+        // 将新的 class 属性值设置
+        elem.className = className;
+    }
+
+    /*// 通过元素的 class 属性值定位元素
+    var elems = parent.getElementsByClassName('btn');
+    // 循环遍历所有元素
+    for (var i=0; i<elems.length; i++) {
+        var elem = elems[i];
+        // 获取定位元素的 class 属性值
+        var className = elem.className;
+        // 添加 animate 动画样式
+        className += ' animate';
+        // 将新的 class 属性值设置
+        elem.className = className;
+    }*/
+
+    /*// 通过 CSS 的 id 选择器定位元素
+    var btn = parent.querySelector('#btn');
+    // 获取定位元素的 class 属性值
+    var className = btn.className;
+    // 添加 animate 动画样式
+    className += ' animate';
+    // 将新的 class 属性值设置
+    btn.className = className;*/
+
+    /*// 通过 CSS 的元素选择器定位元素
+    var elems = parent.querySelectorAll('button');
+    // 循环遍历所有元素
+    for (var i=0; i<elems.length; i++) {
+        var elem = elems[i];
+        // 获取定位元素的 class 属性值
+        var className = elem.className;
+        // 添加 animate 动画样式
+        className += ' animate';
+        // 将新的 class 属性值设置
+        elem.className = className;
+    }*/
+
+    function getElementsByClassName(element, names) {
+        // 检测 getElementsByClassName() 是否可用
+        if (element.getElementsByClassName) {
+            // 优先使用 W3C 规范
+            return element.getElementsByClassName(names);
+        }else {
+            // 获取所有后代元素节点
+            var elements = element.getElementsByTagName('*');
+            // 定义空数组
+            var result = [];
+            var element, classNameStr, flag;
+            // 将样式名称改为数组类型
+            names = names.split(' ');
+            // 循环遍历所有元素节点
+            for (var i=0; element = elements[i]; i++) {
+                // 获取每个元素节点的样式名称
+                classNameStr = ' ' + element.className + ' ';
+                // 开启开关
+                flag = true;
+                // 循环遍历所有的样式名称
+                for (var j=0, name; name = names[j]; j++) {
+                    // 判断当前元素节点的样式名称中是否包含指定的样式名称
+                    if (classNameStr.indexOf(' ' + name + ' ') == -1){
+                        // 如果不包含，则关闭开关，并且结束循环
+                        flag = false;
+                        break;
+                    }
+                }
+                // 判断当前元素节点是否包含指定样式名称
+                if (flag) {
+                    // 如果包含，则将当前元素节点添加到数组中
+                    result.push(element);
+                }
+            }
+            // 返回数组(所有包含指定样式名称的元素节点)
+            return result;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element 对象的 classList 属性</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    var classList = btn.classList;
+    // 添加 .animate 样式
+    classList.add('animate');
+    // 删除 .animate 样式
+    classList.remove('animate');
+    // 如果 .animate 存在，则删除；如果 .animate 不存在，则添加
+    classList.toggle('animate');
+    // 判断是否存在 .animate 样式
+    console.log(classList.contains('animate'));
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取父节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取父节点
+    var btn = document.getElementById('btn');
+    var parentNode = btn.parentNode;
+    var className = parentNode.className;
+    className += ' animate';
+    parentNode.className = className;
+
+    // 获取父元素节点
+    var btn = document.getElementById('btn');
+    var parentElement = btn.parentElement;
+    var className = parentElement.className;
+    className += ' animate';
+    parentElement.className = className;
+
+    // 对比 parentNode 和 parentElement 的区别
+    // 获取 <html> 元素
+    var html = document.documentElement;
+    console.log('parentNode: ' + html.parentNode);
+    console.log('parentElement: ' + html.parentElement);
+
+</script>
+</body>
+</html>

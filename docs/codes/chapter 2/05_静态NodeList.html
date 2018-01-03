@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态NodeList</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    var elems = document.querySelectorAll('button');
+    console.log(elems.length);// 输出 3
+
+    // 添加一个新的button按钮
+    var btn = document.createElement('button');
+    btn.setAttribute('class','button');
+    var text = document.createTextNode('New Button');
+    btn.appendChild(text);
+
+    var div = document.getElementsByClassName('button-group')[0];
+    div.appendChild(btn);
+
+    console.log(elems.length);// 输出 3
+</script>
+</body>
+</html>

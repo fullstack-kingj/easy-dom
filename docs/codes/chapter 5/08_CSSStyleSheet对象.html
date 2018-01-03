@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSStyleSheet对象</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .button {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button id="btn" name="btn" class="button animate">A Button</button>
+    <button name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    console.log(document.styleSheets[0]);
+</script>
+</body>
+</html>

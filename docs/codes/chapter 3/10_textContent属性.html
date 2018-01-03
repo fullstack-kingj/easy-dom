@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>textContent属性</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<p id="p">这是一个段落.<span>这是一个文本.</span></p>
+<script>
+    var pElement = document.getElementById('p');
+    console.log(pElement.textContent);
+
+    var btn = document.getElementById('btn');
+    btn.textContent = 'A New Button';
+
+    function text(elem, text){
+        // 如果 text 存在，表示设置文本内容
+        if(text){
+            /*if(elem.textContent){
+                // 表示其他浏览器
+                elem.textContent = text;
+            }else{
+                // 表示 IE 浏览器
+                elem.innerText = text;
+            }*/
+            elem.textContent ? elem.textContent = text : elem.innerText = text;
+        }else{
+            if(elem.textContent){
+                // 表示其他浏览器
+                return elem.textContent;
+            }else{
+                // 表示 IE 浏览器
+                return elem.innerText;
+            }
+        }
+    }
+</script>
+</body>
+</html>

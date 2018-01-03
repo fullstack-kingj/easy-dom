@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document对象的继承关系链</title>
+</head>
+<body>
+<script>
+    console.log(Document.prototype instanceof Node);
+    console.log(Document.prototype instanceof EventTarget);
+
+    console.log(Node.prototype instanceof EventTarget);
+
+    console.log(Document.prototype instanceof HTMLDocument);
+</script>
+</body>
+</html>

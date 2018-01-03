@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取兄弟节点</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="parent" class="button-group">
+    <button name="btn" class="button">A Button</button>
+    <button id="btn" name="btn" class="button">A Button</button>
+    <button name="btn" class="button">A Button</button>
+</div>
+<script>
+    // 获取前一个兄弟节点
+    var elem = document.getElementById('btn');
+    var previousSibling = elem.previousSibling;
+    // 判断获取的兄弟节点是否为元素节点
+    if ( previousSibling.nodeType != 1){
+        previousSibling = previousSibling.previousSibling;
+    }
+</script>
+</body>
+</html>

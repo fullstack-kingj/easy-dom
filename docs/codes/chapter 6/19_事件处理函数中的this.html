@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理函数中的this</title>
+    <style type="text/css">
+        body {
+            padding: 100px;
+        }
+        .list-group {
+            padding: 30px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+<ul id="li" class="list-group">
+    <li class="list-group-item"><a href="#">链接</a></li>
+</ul>
+<script type="text/javascript">
+    var li = document.getElementById('li');
+    li.addEventListener('click',function(event){
+        console.log(this);
+    });
+</script>
+</body>
+</html>

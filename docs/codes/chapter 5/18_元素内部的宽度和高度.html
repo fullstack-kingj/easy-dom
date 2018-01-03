@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素内部的宽度和高度</title>
+    <style>
+        .div {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            padding: 20px;
+            border: 5px orange solid;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="d" class="div"></div>
+<script>
+    var div = document.getElementById('d');
+    // 获取 div 的样式
+    var style = document.styleSheets[0].cssRules[0].style;
+    // 计算 clientWidth 属性的值
+    var clientWidth = parseInt(style.width) + parseInt(style.paddingLeft) + parseInt(style.paddingRight);
+    // 测试打印 clientWidth = width + padding-left + padding-right
+    console.log(div.clientWidth, clientWidth);
+
+</script>
+</body>
+</html>

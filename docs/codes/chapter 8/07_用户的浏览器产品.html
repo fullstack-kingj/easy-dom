@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户的浏览器产品</title>
+</head>
+<body>
+<script>
+    var ua = navigator.userAgent;
+
+    if(/firefox/i.test(ua)){
+        console.log('当前使用的是 Firefox 浏览器');
+    }else if(/chrome/i.test(ua)){
+        console.log('当前使用的是 Chrome 浏览器');
+    }else if(/safari/i.test(ua)){
+        console.log('当前使用的是 Safari 浏览器');
+    }else if(/msie/i.test(ua)){
+        console.log('当前使用的是 IE 11 之前版本的浏览器');
+    }else if("ActiveXObject" in window){
+        console.log('当前使用的是 IE 11 浏览器');
+    }
+</script>
+</body>
+</html>

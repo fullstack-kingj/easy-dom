@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置内联样式</title>
+</head>
+<body>
+<p id="p1" style="color: lightcoral;font-weight: bolder">这是一个段落内容.</p>
+<script>
+    var pElem = document.getElementById('p1');
+    // 1. 通过 element.style 方式设置样式
+    pElem.style = 'color: lightblue;font-weight: lighter';
+
+    // 2. 通过 element.setAttribute() 方法设置样式
+    pElem.setAttribute('style','color: lightblue;font-weight: lighter');
+    // 通过 element.removeAttribute() 方法删除样式
+    pElem.removeAttribute('style');
+</script>
+</body>
+</html>

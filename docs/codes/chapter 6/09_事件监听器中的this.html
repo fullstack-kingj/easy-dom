@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听器中的this</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="button-group">
+    <button id="btn" class="button">按钮</button>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click',function(){
+        console.log(btn.textContent);
+    });
+    btn.addEventListener('click',function(){
+        console.log(this.textContent);
+    });
+
+    btn.attachEvent('onclick',function(){
+        console.log(this);
+    });
+</script>
+</body>
+</html>
