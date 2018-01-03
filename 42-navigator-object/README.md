@@ -16,7 +16,10 @@ Navigator 对象提供一系列常用属性，获取当前浏览器的信息。�
 我们可以通过以下代码示例，测试上述 Navigator 对象的常见属性:
 
 ```javascript
-console.log('浏览器的代码名: ' + navigator.appCodeName);console.log('浏览器的名称: ' + navigator.appName);console.log('浏览器的平台和版本信息: ' + navigator.appVersion);console.log('运行浏览器的操作系统平台: ' + navigator.platform);
+console.log('浏览器的代码名: ' + navigator.appCodeName);
+console.log('浏览器的名称: ' + navigator.appName);
+console.log('浏览器的平台和版本信息: ' + navigator.appVersion);
+console.log('运行浏览器的操作系统平台: ' + navigator.platform);
 ```
 
 ## userAgent 属性
@@ -40,7 +43,19 @@ Navigator 对象提供很多属性，可以来识别当前浏览器及操作系�
 通过 userAgent 属性获取用户当前使用的浏览器产品，提供浏览器兼容解决方案。如下代码所示:
 
 ```javascript
-var ua = navigator.userAgent;if(/firefox/i.test(ua)){    console.log('当前使用的是 Firefox 浏览器');}else if(/chrome/i.test(ua)){    console.log('当前使用的是 Chrome 浏览器');}else if(/safari/i.test(ua)){    console.log('当前使用的是 Safari 浏览器');}else if(/msie/i.test(ua)){    console.log('当前使用的是 IE 11 之前版本的浏览器');}else if("ActiveXObject" in window){    console.log('当前使用的是 IE 11 浏览器');}
+var ua = navigator.userAgent;
+
+if(/firefox/i.test(ua)){
+	console.log('当前使用的是 Firefox 浏览器');
+}else if(/chrome/i.test(ua)){
+	console.log('当前使用的是 Chrome 浏览器');
+}else if(/safari/i.test(ua)){
+	console.log('当前使用的是 Safari 浏览器');
+}else if(/msie/i.test(ua)){
+	console.log('当前使用的是 IE 11 之前版本的浏览器');
+}else if("ActiveXObject" in window){
+	console.log('当前使用的是 IE 11 浏览器');
+}
 ```
 
 ### 用户的操作系统信息
@@ -48,5 +63,13 @@ var ua = navigator.userAgent;if(/firefox/i.test(ua)){    console.log('当前�
 通过 userAgent 属性获取用户当前使用的操作系统信息，具体代码示例如下:
 
 ```javascript
-if (/windows/i.test(ua)){    console.log('当前使用的是 Windows 操作系统');}else if (/mac/i.test(ua)){    console.log('当前使用的是 Mac 操作系统');}else if (/android/i.test(ua)){    console.log('当前使用的是 Android 操作系统');}else if (/iphone/i.test(ua)){    console.log('当前使用的是 iPhone 操作系统');}
+if (/windows/i.test(ua)){
+	console.log('当前使用的是 Windows 操作系统');
+}else if (/mac/i.test(ua)){
+	console.log('当前使用的是 Mac 操作系统');
+}else if (/android/i.test(ua)){
+	console.log('当前使用的是 Android 操作系统');
+}else if (/iphone/i.test(ua)){
+	console.log('当前使用的是 iPhone 操作系统');
+}
 ```
