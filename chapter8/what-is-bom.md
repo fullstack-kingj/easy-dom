@@ -8,5 +8,5 @@ BOM 由一系列对象构成，这些对象可以简单理解为是由各个浏�
 
 ## BOM 关系图
 
-![](images/chapter8/01.png) 
+![](images/01.png) 
 

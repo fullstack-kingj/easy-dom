@@ -1,0 +1,1123 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第一节 Document 对象介绍 · EASYDOM - 可能是最适合你的 DOM 课程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="全栈讲师-金云龙">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="get-elements.html" />
+    
+    
+    <link rel="prev" href="../Document对象.md" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.longestory.com" target="_blank" class="custom-link">作者的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../DOM是什么.md">
+            
+                <span>
+            
+                    
+                    第一章 DOM 是什么
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/dom-summary.html">
+            
+                <a href="../chapter1/dom-summary.html">
+            
+                    
+                    第一节 DOM 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/dom-tree.html">
+            
+                <a href="../chapter1/dom-tree.html">
+            
+                    
+                    第二节 DOM 树结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Document对象.md">
+            
+                <span>
+            
+                    
+                    第二章 Document 对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="document-object.html">
+            
+                <a href="document-object.html">
+            
+                    
+                    第一节 Document 对象介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="get-elements.html">
+            
+                <a href="get-elements.html">
+            
+                    
+                    第二节 定位页面元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="create-element.html">
+            
+                <a href="create-element.html">
+            
+                    
+                    第三节 创建页面元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Node对象.md">
+            
+                <span>
+            
+                    
+                    第三章 Node 对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/node-object.html">
+            
+                <a href="../chapter3/node-object.html">
+            
+                    
+                    第一节 Node 对象介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/node-type.html">
+            
+                <a href="../chapter3/node-type.html">
+            
+                    
+                    第二节 判断节点类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/loop-node.html">
+            
+                <a href="../chapter3/loop-node.html">
+            
+                    
+                    第三节 遍历节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/insert-node.html">
+            
+                <a href="../chapter3/insert-node.html">
+            
+                    
+                    第四节 插入节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/remove-node.html">
+            
+                <a href="../chapter3/remove-node.html">
+            
+                    
+                    第五节 删除节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/replace-node.html">
+            
+                <a href="../chapter3/replace-node.html">
+            
+                    
+                    第六节 替换节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter3/clone-node.html">
+            
+                <a href="../chapter3/clone-node.html">
+            
+                    
+                    第七节 复制节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter3/textcontent-attr.html">
+            
+                <a href="../chapter3/textcontent-attr.html">
+            
+                    
+                    第八节 textContent 属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Element对象.md">
+            
+                <span>
+            
+                    
+                    第四章 Element 对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/element-object.html">
+            
+                <a href="../chapter4/element-object.html">
+            
+                    
+                    第一节 Element 对象介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/elements-tree.html">
+            
+                <a href="../chapter4/elements-tree.html">
+            
+                    
+                    第二节 DOM 元素树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/get-elements.html">
+            
+                <a href="../chapter4/get-elements.html">
+            
+                    
+                    第三节 定位页面元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/loop-element.html">
+            
+                <a href="../chapter4/loop-element.html">
+            
+                    
+                    第四节 遍历元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/attr-operate.html">
+            
+                <a href="../chapter4/attr-operate.html">
+            
+                    
+                    第五节 属性操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/innerhtml-attr.html">
+            
+                <a href="../chapter4/innerhtml-attr.html">
+            
+                    
+                    第六节 innerHTML 属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../样式操作.md">
+            
+                <span>
+            
+                    
+                    第五章 样式操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/get-inline-style.html">
+            
+                <a href="../chapter5/get-inline-style.html">
+            
+                    
+                    第一节 获取内联样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/get-outline-style.html">
+            
+                <a href="../chapter5/get-outline-style.html">
+            
+                    
+                    第二节 获取外联样式表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/get-class-attr.html">
+            
+                <a href="../chapter5/get-class-attr.html">
+            
+                    
+                    第三节 获取 class 属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/get-computed-style.html">
+            
+                <a href="../chapter5/get-computed-style.html">
+            
+                    
+                    第四节 获取当前有效样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/set-inline-style.html">
+            
+                <a href="../chapter5/set-inline-style.html">
+            
+                    
+                    第五节 设置内联样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/set-class-attr.html">
+            
+                <a href="../chapter5/set-class-attr.html">
+            
+                    
+                    第六节 设置 class 属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/element-style-attr.html">
+            
+                <a href="../chapter5/element-style-attr.html">
+            
+                    
+                    第七节 Element 对象的样式属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../事件.md">
+            
+                <span>
+            
+                    
+                    第六章 事件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/what-is-event.html">
+            
+                <a href="../chapter6/what-is-event.html">
+            
+                    
+                    第一节 什么是事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/regist-event.html">
+            
+                <a href="../chapter6/regist-event.html">
+            
+                    
+                    第二节 注册事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/remove-regist-event.html">
+            
+                <a href="../chapter6/remove-regist-event.html">
+            
+                    
+                    第三节 移除注册事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/event-object.html">
+            
+                <a href="../chapter6/event-object.html">
+            
+                    
+                    第四节 Event 事件对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/get-target-element.html">
+            
+                <a href="../chapter6/get-target-element.html">
+            
+                    
+                    第五节 获取目标元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/prevent-default.html">
+            
+                <a href="../chapter6/prevent-default.html">
+            
+                    
+                    第六节 阻止默认行为
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../chapter6/get-mouse-ordinate.html">
+            
+                <a href="../chapter6/get-mouse-ordinate.html">
+            
+                    
+                    第七节 获取鼠标坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../chapter6/event-flow.html">
+            
+                <a href="../chapter6/event-flow.html">
+            
+                    
+                    第八节 事件流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../chapter6/event-delegate.html">
+            
+                <a href="../chapter6/event-delegate.html">
+            
+                    
+                    第九节 事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../表单操作.md">
+            
+                <span>
+            
+                    
+                    第七章 表单操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/get-form-element.html">
+            
+                <a href="../chapter7/get-form-element.html">
+            
+                    
+                    第一节 获取表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/form-module.html">
+            
+                <a href="../chapter7/form-module.html">
+            
+                    
+                    第二节 表单操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/form-validate.html">
+            
+                <a href="../chapter7/form-validate.html">
+            
+                    
+                    第三节 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/form-submit.html">
+            
+                <a href="../chapter7/form-submit.html">
+            
+                    
+                    第四节 表单提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../BOM.md">
+            
+                <span>
+            
+                    
+                    第八章 BOM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/what-is-bom.html">
+            
+                <a href="../chapter8/what-is-bom.html">
+            
+                    
+                    第一节 BOM 是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/window-object.html">
+            
+                <a href="../chapter8/window-object.html">
+            
+                    
+                    第二节 Window 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/navigator-object.html">
+            
+                <a href="../chapter8/navigator-object.html">
+            
+                    
+                    第三节 Navigator 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/history-object.html">
+            
+                <a href="../chapter8/history-object.html">
+            
+                    
+                    第四节 History 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter8/location-object.html">
+            
+                <a href="../chapter8/location-object.html">
+            
+                    
+                    第五节 Location 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../chapter8/time-out.html">
+            
+                <a href="../chapter8/time-out.html">
+            
+                    
+                    第六节 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第一节 Document 对象介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Document &#x5BF9;&#x8C61;&#x662F; DOM &#x7684;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x4E2D;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x4E00;&#x3002;&#x8BE5;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86;&#x8BBF;&#x95EE;&#x548C;&#x66F4;&#x65B0; HTML &#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="document-&#x5BF9;&#x8C61;&#x7684;&#x4F5C;&#x7528;">Document &#x5BF9;&#x8C61;&#x7684;&#x4F5C;&#x7528;</h2>
+<p>Document &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A; DOM &#x8BBF;&#x95EE;&#x548C;&#x66F4;&#x65B0; HTML &#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x5165;&#x53E3;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A; Document &#x5BF9;&#x8C61;&#x7406;&#x89E3;&#x4E3A;&#x5728; DOM &#x7684;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x4E2D;&#x4EE3;&#x8868; HTML &#x9875;&#x9762;&#x3002;&#xFF08;<strong>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x79CD;&#x8BF4;&#x6CD5;&#x5E76;&#x4E0D;&#x51C6;&#x786E;</strong>&#xFF09;</p>
+<p>Document &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5B9A;&#x4F4D; HTML &#x9875;&#x9762;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x6D4B;&#x8BD5;-document-&#x5BF9;&#x8C61;">&#x6D4B;&#x8BD5; Document &#x5BF9;&#x8C61;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>console.log</code> &#x65B9;&#x6CD5;&#x5C06; Document &#x5BF9;&#x8C61;&#x6253;&#x5370;&#xFF0C;&#x6D4B;&#x8BD5; Document &#x5BF9;&#x8C61;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">document</span>);
+</code></pre>
+<p>&#x8FD0;&#x884C; HTML &#x9875;&#x9762;&#x540E;&#xFF0C;&#x6253;&#x5F00; <strong>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</strong>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<p><img src="images/01.png" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x53D1;&#x73B0; <code>console</code> &#x4F1A;&#x5C06; HTML &#x9875;&#x9762;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x6253;&#x5370;&#x51FA;&#x6765;&#x3002;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x5145;&#x5206;&#x5730;&#x8BF4;&#x660E;&#x4E86; Document &#x5BF9;&#x8C61;&#x5728; DOM &#x7684;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x4E2D;&#x4EE3;&#x8868;&#x6574;&#x4E2A; HTML &#x9875;&#x9762;&#x3002;</p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BB2;&#xFF0C;DOM &#x8BBF;&#x95EE;&#x548C;&#x66F4;&#x65B0; HTML &#x9875;&#x9762;&#x5185;&#x5BB9;&#x4E3B;&#x8981;&#x4F9D;&#x9760; Document &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x3002;</p>
+<h2 id="document-&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x4E00;&#x89C8;">Document &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x4E00;&#x89C8;</h2>
+<p>&#x5728; DOM &#x7684;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x4E2D;&#xFF0C;Document &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x4E86; <code>prototype</code> &#x539F;&#x578B;&#x4E2D;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x67E5;&#x770B; Document &#x5BF9;&#x8C61;&#x4E2D;&#x5177;&#x6709;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x6253;&#x5370; Document &#x5BF9;&#x8C61;&#x7684; <code>protoype</code> &#x8FDB;&#x884C;&#x67E5;&#x770B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(Document.prototype);
+</code></pre>
+<p>&#x8FD0;&#x884C; HTML &#x9875;&#x9762;&#x540E;&#xFF0C;&#x6253;&#x5F00; <strong>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</strong>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<pre><code>URL:(...)
+activeElement:(...)
+adoptNode:function adoptNode()
+anchors:(...)
+append:function append()
+applets:(...)
+baseURI:(...)
+body:(...)
+characterSet:(...)
+charset:(...)
+childElementCount:(...)
+childNodes:(...)
+children:(...)
+close:function close()
+contentType:(...)
+cookie:(...)
+createAttribute:function createAttribute()
+createElement:function createElement()
+createEvent:function createEvent()
+createExpression:function createExpression()
+createNSResolver:function createNSResolver()
+createNodeIterator:function createNodeIterator()
+createProcessingInstruction:function createProcessingInstruction()
+createRange:function createRange()
+createTextNode:function createTextNode()
+createTreeWalker:function createTreeWalker()
+currentScript:(...)
+defaultView:(...)
+designMode:(...)
+dir:(...)
+doctype:(...)
+documentElement:(...)
+documentURI:(...)
+domain:(...)
+firstChild:(...)
+firstElementChild:(...)
+fonts:(...)
+forms:(...)
+getElementById:function getElementById()
+getElementsByClassName:function getElementsByClassName()
+getElementsByName:function getElementsByName()
+getElementsByTagName:function getElementsByTagName()
+getSelection:function getSelection()
+hasFocus:function hasFocus()
+head:(...)
+hidden:(...)
+images:(...)
+implementation:(...)
+importNode:function importNode()
+inputEncoding:(...)
+isConnected:(...)
+lastChild:(...)
+lastElementChild:(...)
+lastModified:(...)
+links:(...)
+nextSibling:(...)
+nodeName:(...)
+nodeType:(...)
+nodeValue:(...)
+open:function open()
+ownerDocument:(...)
+parentElement:(...)
+parentNode:(...)
+prepend:function prepend()
+previousSibling:(...)
+querySelector:function querySelector()
+querySelectorAll:function querySelectorAll()
+readyState:(...)
+referrer:(...)
+registerElement:function registerElement()
+rootElement:(...)
+scripts:(...)
+scrollingElement:(...)
+selectedStylesheetSet:(...)
+styleSheets:(...)
+textContent:(...)
+title:(...)
+visibilityState:(...)
+write:function write()
+writeln:function writeln()
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;Document &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x3002;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x5E76;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x3002;</p>
+<blockquote>
+<p><strong>&#x5173;&#x4E8E; Document &#x5BF9;&#x8C61;&#x7684;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x5B66;&#x4E60;&#x3002;</strong></p>
+</blockquote>
+<h2 id="document-&#x5BF9;&#x8C61;&#x7684;&#x7EE7;&#x627F;&#x94FE;">Document &#x5BF9;&#x8C61;&#x7684;&#x7EE7;&#x627F;&#x94FE;</h2>
+<p>Document &#x5BF9;&#x8C61;&#x662F;&#x7EE7;&#x627F;&#x4E8E; Node &#x5BF9;&#x8C61;&#x7684;&#x3002;Node &#x5BF9;&#x8C61;&#x4E5F;&#x662F; DOM &#x7684;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x4E2D;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x4E00;&#xFF0C;&#x800C; Node &#x5BF9;&#x8C61;&#x53C8;&#x662F;&#x7EE7;&#x627F;&#x4E8E; EventTarget &#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6765;&#x6D4B;&#x8BD5; Document &#x5BF9;&#x8C61;&#x7684;&#x7EE7;&#x627F;&#x94FE;:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(Document.prototype <span class="hljs-keyword">instanceof</span> Node);
+<span class="hljs-built_in">console</span>.log(Node.prototype <span class="hljs-keyword">instanceof</span> EventTarget);
+
+<span class="hljs-built_in">console</span>.log(Document.prototype <span class="hljs-keyword">instanceof</span> EventTarget);
+</code></pre>
+<p>Document &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x591A;&#x662F;&#x7EE7;&#x627F;&#x4E8E; Node &#x5BF9;&#x8C61;&#x548C; EventTarget &#x5BF9;&#x8C61;&#x7684;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x662F;&#x5B9E;&#x73B0;&#x4E86; HTMLDocument &#x63A5;&#x53E3;&#x7684;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.longestory.com 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-01-06 22:37:13
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Document对象.md" class="navigation navigation-prev " aria-label="Previous page: 第二章 Document 对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="get-elements.html" class="navigation navigation-next " aria-label="Next page: 第二节 定位页面元素">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第一节 Document 对象介绍","level":"1.3.1","depth":2,"next":{"title":"第二节 定位页面元素","level":"1.3.2","depth":2,"path":"chapter2/get-elements.md","ref":"chapter2/get-elements.md","articles":[]},"previous":{"title":"第二章 Document 对象","level":"1.3","depth":1,"path":"Document对象.md","ref":"Document对象.md","articles":[{"title":"第一节 Document 对象介绍","level":"1.3.1","depth":2,"path":"chapter2/document-object.md","ref":"chapter2/document-object.md","articles":[]},{"title":"第二节 定位页面元素","level":"1.3.2","depth":2,"path":"chapter2/get-elements.md","ref":"chapter2/get-elements.md","articles":[]},{"title":"第三节 创建页面元素","level":"1.3.3","depth":2,"path":"chapter2/create-element.md","ref":"chapter2/create-element.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","github-buttons","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","donate","github-issue-feedback"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.longestory.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github-issue-feedback":{"repo":"jyl/easy-dom"},"github":{"url":"https://github.com/jyl/easy-dom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"images/zhifubao.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"images/weixin.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"全栈讲师-金云龙","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"EASYDOM - 可能是最适合你的 DOM 课程","language":"zh-hans","links":{"sidebar":{"作者的博客":"http://www.longestory.com"}},"gitbook":"*"},"file":{"path":"chapter2/document-object.md","mtime":"2018-01-06T14:37:13.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-06T14:49:32.886Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-issue-feedback/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -14,7 +14,7 @@ DOM 是由 W3C 组织定义标准规范，并且由各大浏览器厂商支持�
 
 DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文档对象模型**。
 
-![](images/chapter1/01.png)
+![](images/01.png)
 
 其中 **D** 表示 **Document**，就是 DOM 将 HTML 页面解析为一个 **文档**。同时提供了 `document` 对象。
 
@@ -30,7 +30,7 @@ DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文�
 
 换句话讲，DOM 可以理解为是 HTML 页面与 JavaScript 语言之间的一个桥梁。
 
-![](images/chapter1/02.png)
+![](images/02.png)
 
 ## DOM 的定义
 
@@ -86,3 +86,4 @@ btn.className = className;
 虽然，自从 W3C 定义了 DOM 的标准规范后，浏览器的兼容问题好了很多。但，各大浏览器都或多或少地扩展了 W3C 定义的 DOM 标准。
 
 > 在实际开发中，尽量使用 W3C 的 DOM 标准规范，以避免更多的浏览器兼容问题。
+

@@ -16,7 +16,7 @@ Event 事件对象提供了 target 属性，用于获取触发当前事件的 HT
 
 上述示例代码运行效果如右图所示:
 
-![](images/chapter6/02.png)
+![](images/02.png)
 
 - 如果点击 `<a>` 元素，则 `<a>` 元素触发事件，target 属性表示 `<a>` 元素。
 

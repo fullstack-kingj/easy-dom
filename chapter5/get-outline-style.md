@@ -28,7 +28,7 @@ console.log(document.styleSheets);
 
 上述示例代码输出的结果如下:
 
-![](images/chapter5/06.png)
+![](images/06.png)
 
 ## StyleSheetList 对象Document 对象的 styleSheets 属性返回的是一个 StyleSheetList 对象。该对象是一个类数组对象，可以通过 for 循环语句进行遍历，或者将其转换为数组。> **值得注意的是:** StyleSheetList 对象本身不能使用数组方法进行操作。我们可以通过以下示例代码，测试研究 StyleSheetList 对象:
 
@@ -46,7 +46,7 @@ console.log(document.styleSheets[0]);
 
 上述示例代码输出的结果如下:
 
-![](images/chapter5/07.png)
+![](images/07.png)
 
 ## CSSRuleList 对象CSSStyleSheet 对象的 cssRules 属性返回的是一个 CSSRuleList 对象。该对象是一个类数组对象，可以通过 for 循环语句进行遍历，或者将其转换为数组。我们可以通过以下示例代码，测试研究 CSSRuleList 对象:
 
@@ -64,4 +64,6 @@ console.log(document.styleSheets[1].cssRules[0]);
 
 上述示例代码输出的结果如下:
 
-![](images/chapter5/08.png)
+![](images/08.png)
+
+

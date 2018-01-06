@@ -51,7 +51,7 @@ var btn = document.getElementById('btn');var parentElement = btn.parentElement;
 
 上述代码示例，输出的结果如下:
 
-![](images/chapter3/02.png)
+![](images/02.png)
 
 ## 获取子节点
 
@@ -85,7 +85,7 @@ var parentNode = document.getElementById('parent');var children = parentNode.ch
 
 上述代码示例，输出的结果如下:
 
-![](images/chapter3/03.png)
+![](images/03.png)
 
 我们会发现，获取到的所有子节点，除了真正的子节点 `<button>` 之外，还具有 4 个文本节点。
 
@@ -103,7 +103,7 @@ var parentNode = document.getElementById('parent');var children = parentNode.ch
 
 上述代码示例的 DOM 节点树结构如下图所示:
 
-![](images/chapter3/04.png)
+![](images/04.png)
 
 如果将 HTML 页面的源代码编写成一行时，这个空白节点的问题可以得到解决。但这种解决方式妨碍了我们代码的可读性，并不建议这样解决。
 
@@ -123,7 +123,7 @@ var parentNode = document.getElementById('parent');var children = parentNode.ge
 
 上述代码示例运行的结果如下:
 
-![](images/chapter3/05.png)
+![](images/05.png)
 
 > 关于 DOM 中为什么要具有空白节点以及更完整的解决方案，可以参考 Mozilla 社区的[《DOM 中的空白符》](https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM)。
 

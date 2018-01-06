@@ -1,4 +1,4 @@
-![](images/summary/cover.png)
+![](images/cover.png)
 
 > **学习本套课程，需要你具备 HTML、CSS 以及 JavaScript 语法部分的基础。**
 
@@ -60,13 +60,13 @@ BOM，原本是作为 JavaScript 三个组成部分的其中一个，但由于�
 
 本套课程会尽量完善，编写过程中难免出现纰漏。你可以通过以下展示方式进行反馈，作者会根据反馈及时更新和修改。
 
-![](images/summary/github-issue-feedback.gif)
+![](images/github-issue-feedback.gif)
 
 ## 交流
 
 你可以扫描下方的二维码，加入本套课程的 QQ 讨论群，与其他童鞋一起学习交流。
 
-![](images/summary/connection.png)
+![](images/connection.png)
 
 ## 版权
 
@@ -75,3 +75,4 @@ BOM，原本是作为 JavaScript 三个组成部分的其中一个，但由于�
 本套课程采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />
+

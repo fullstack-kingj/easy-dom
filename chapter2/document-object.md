@@ -16,7 +16,7 @@ console.log(document);
 
 运行 HTML 页面后，打开 **开发者工具**，我们可以看到以下内容:
 
-![](images/chapter2/01.png)
+![](images/01.png)
 
 我们会发现 `console` 会将 HTML 页面的源代码打印出来。这个结果充分地说明了 Document 对象在 DOM 的标准规范中代表整个 HTML 页面。
 
@@ -133,3 +133,4 @@ console.log(Document.prototype instanceof EventTarget);
 ```
 
 Document 对象的属性和方法多是继承于 Node 对象和 EventTarget 对象的。当然，也有一部分属性和方法是实现了 HTMLDocument 接口的。
+

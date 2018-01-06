@@ -40,7 +40,7 @@ element.addEventListener(eventName, functionName, capture)
 
 我们可以通过以下示意图更好地理解事件的捕获阶段:
 
-![](images/chapter6/07.png)
+![](images/07.png)
 
 ## 冒泡阶段
 
@@ -58,7 +58,7 @@ element.addEventListener(eventName, functionName, capture)
 
 我们可以通过以下示意图更好地理解事件的冒泡阶段:
 
-![](images/chapter6/08.png)
+![](images/08.png)
 
 ## 取消事件冒泡
 
@@ -87,3 +87,5 @@ element.addEventListener(eventName, functionName, capture)
 	},false);
 </script>
 ```
+
+

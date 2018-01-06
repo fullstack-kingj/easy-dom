@@ -41,7 +41,7 @@ console.log(window.job);
 
 上述示例代码的执行结果如下:
 
-![](images/chapter8/02.png)
+![](images/02.png)
 
 ## Window 对象的属性
 
@@ -63,7 +63,7 @@ Window 对象提供的属性中可以获取当前浏览器窗口的宽度和高�
 
 	只读属性，返回当前浏览器窗口的整个宽度和高度。
 
-![](images/chapter8/03.png)
+![](images/03.png)
 
 ### Window 对象与 self 属性
 

@@ -76,7 +76,7 @@ getElementsByClassName() 方法只支持 IE 9 版本及之后版本的浏览器�
 
 下图是不同浏览器的不同版本对 getElementsByClassName() 方法的支持情况:
 
-![](images/chapter2/02.png)
+![](images/02.png)
 
 由于国内的生产环境中，依旧存在使用 IE 8 及之前版本浏览器的情况。所以，我们需要自定义 getElementsByClassName() 方法解决浏览器的兼容问题。
 
@@ -198,3 +198,5 @@ console.log(document.title);
 console.log(document.links);
 console.log(document.images);
 ```
+
+

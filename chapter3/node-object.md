@@ -29,4 +29,6 @@ console.log(Node.prototype)
 
 运行 HTML 页面后，打开 **开发者工具**，我们可以看到以下内容:
 
-![](images/chapter3/01.png)
+![](images/01.png)
+
+

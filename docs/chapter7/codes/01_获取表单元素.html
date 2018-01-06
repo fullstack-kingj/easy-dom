@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取表单元素</title>
+</head>
+<body>
+<form id="myform" name="myform" class="login" action="#"></form>
+<script>
+    var formId = document.getElementById('myform');
+    var formName = document.getElementsByName('myform');
+    var formElement = document.getElementsByTagName('form')[0];
+    var formClass = document.getElementsByClassName('login')[0];
+
+    var formId2 = document.querySelector('#myform');
+    var formElement2 = document.querySelectorAll('form')[0];
+
+    var forms = document.forms;
+    console.log(forms);
+</script>
+</body>
+</html>

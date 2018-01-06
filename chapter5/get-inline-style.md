@@ -43,7 +43,7 @@ var value = element.getAttribute('style');
 
 上述示例代码的输出结果如下:
 
-![](images/chapter5/01.png)
+![](images/01.png)
 
 ### DOM 对象的 style 属性
 
@@ -94,7 +94,7 @@ CSSStyleDeclaration 对象提供的属性和方法可以帮助我们获取 CSS �
 
 上述示例代码的输出结果如下:
 
-![](images/chapter5/02.png)
+![](images/02.png)
 
 > **值得注意的是:** cssText 属性返回的是 CSS 声明块的文本内容，解析操作时会比较麻烦。
 
@@ -120,7 +120,7 @@ CSSStyleDeclaration 对象提供的属性和方法可以帮助我们获取 CSS �
 
 上述示例代码的输出结果如下:
 
-![](images/chapter5/03.png)
+![](images/03.png)
 
 在上述示例代码中，我们利用 CSSStyleDeclaration 对象的 length 属性控制遍历过程。
 
@@ -142,7 +142,7 @@ for ( var i=0; i<styleDeclar.length; i++ ){
 
 上述示例代码的输出结果如下:
 
-![](images/chapter5/04.png)
+![](images/04.png)
 
 ### getPropertyValue() 方法
 
@@ -161,7 +161,7 @@ for ( var i=0; i<styleDeclar.length; i++ ){
 
 上述示例代码的输出结果如下:
 
-![](images/chapter5/05.png)
+![](images/05.png)
 
 ### 属性链方式操作
 
@@ -177,3 +177,4 @@ for ( var i=0; i<styleDeclar.length; i++ ){
     console.log(style.color);
 </script>
 ```
+

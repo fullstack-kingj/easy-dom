@@ -21,7 +21,7 @@ var btn = document.getElementById('btn');console.log(btn.className);
 
 上述示例代码输出的结果如下:
 
-![](images/chapter5/09.png)
+![](images/09.png)
 
 ## Element 对象的 classList 属性Element 对象的 className 属性虽然可以获取 HTML 页面中指定元素的 class 属性值，但返回值的是字符串类型。如果 HTML 页面中指定元素的 class 属性值为多个样式的话，对于我们操作会比较麻烦。
 
@@ -41,7 +41,7 @@ var btn = document.getElementById('btn');var elemClasses = btn.classList;for(v
 
 上述示例代码输出的结果如下:
 
-![](images/chapter5/10.png)
+![](images/10.png)
 
 ## 浏览器兼容问题Element 对象的 classList 属性，在 IE 8 及之前版本的浏览器中并不支持。所以，我们要想在各个浏览器中都支持该属性。
 
@@ -291,3 +291,4 @@ if (objCtr.defineProperty) {
 ```
 
 该文件的下载地址为: [https://github.com/eligrey/classList.js/blob/master/classList.js](https://github.com/eligrey/classList.js/blob/master/classList.js)
+
