@@ -51,7 +51,7 @@ var btn = document.getElementById('btn');var parentElement = btn.parentElement;
 
 上述代码示例，输出的结果如下:
 
-![](img/02.png)
+![](images/chapter3/02.png)
 
 ## 获取子节点
 
@@ -123,7 +123,7 @@ var parentNode = document.getElementById('parent');var children = parentNode.ge
 
 上述代码示例运行的结果如下:
 
-![](img/05.png)
+![](images/chapter3/05.png)
 
 > 关于 DOM 中为什么要具有空白节点以及更完整的解决方案，可以参考 Mozilla 社区的[《DOM 中的空白符》](https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM)。
 
