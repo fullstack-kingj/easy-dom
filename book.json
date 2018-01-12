@@ -62,8 +62,8 @@
 	        "modify_format": "YYYY-MM-DD HH:mm:ss"
 	    },
 	    "donate": {
-	        "wechat": "images/weixin.png",
-	        "alipay": "images/zhifubao.png",
+	        "wechat": "http://osryplwmc.bkt.clouddn.com/18-1-12/14192742.jpg",
+	        "alipay": "http://osryplwmc.bkt.clouddn.com/18-1-12/65831669.jpg",
 	        "title": "",
 	        "button": "打赏",
 	        "alipayText": "支付宝打赏",
