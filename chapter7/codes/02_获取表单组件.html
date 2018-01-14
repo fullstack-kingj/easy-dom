@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取表单组件</title>
+</head>
+<body>
+<form id="myform" name="myform" class="login" action="#">
+    用户名: <input type="text" id="username" name="username"><br>
+    密码: <input type="password" id="password" name="password"><br>
+    爱好:
+    <input type="checkbox" name="love" value="html">html
+    <input type="checkbox" name="love" value="css">css
+    <input type="checkbox" name="love" value="javascript">javascript
+    <br>
+    <input type="submit" id="submit">
+</form>
+<script>
+    var username = document.getElementById('username');
+    var loves = document.getElementsByName('love');
+
+    var myform = document.forms[0];
+    var formElements = myform.elements;
+    // console.log(formElements);
+</script>
+<form id="myform2" name="myform2" action="#">
+    <input type="image" src="imgs/cover.png">
+</form>
+<script>
+    var myform2 = document.forms[1];
+    var formElements2 = myform2.elements;
+    console.log(formElements2);
+</script>
+</body>
+</html>

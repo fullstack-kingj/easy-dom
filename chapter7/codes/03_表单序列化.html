@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单序列化</title>
+</head>
+<body>
+<form id="myform" name="myform" class="login" action="#">
+    用户名: <input type="text" id="username" name="username"><br>
+    密码: <input type="password" id="password" name="password"><br>
+    爱好:
+    <input type="checkbox" name="love" value="html">html
+    <input type="checkbox" name="love" value="css">css
+    <input type="checkbox" name="love" value="javascript">javascript
+    <br>
+    <input type="submit" id="submit">
+</form>
+<script>
+    var submit = document.getElementById('submit');
+    submit.onclick = function(){
+        var result = serialize(document.forms[0]);
+        console.log(result);
+
+        return false;// 阻止表单提交
+    }
+
+    function serialize(form) {
+        // 参数验证
+        if(!form && form.nodeName.toUpperCase() != "FORM" ){
+            throw new Error("invalid parameters");
+        }
+
+        var encode = window.encodeURIComponent,
+            slice = Array.prototype.slice;
+
+        var params = [],
+            i = 0,
+            fields = slice.call(form.elements),
+            len = fields.length,
+            el,
+            type;
+
+        for(;i < len; i++){
+            el = fields[i];
+            type = el.type.toLowerCase();
+            switch(type){
+                case  "undefined":
+                case  "button":
+                case  "submit":
+                case  "reset":
+                case "file":
+                    break;
+                case "select-one":
+                case "select-multiple":
+                    if(el.name.length){
+                        var j = 0,
+                            opts = slice.call(el.options),
+                            oLen = opts.length,
+                            selected = [] , // 用于合并参数
+                            opt;
+                        for(; j < oLen; j++){
+                            opt = opts[j];
+                            if(!opt.selected)continue;
+                            selected.push(opt.value);
+                        }
+                        params.push(encode(el.name) + "=" + encode(selected.join(",")));
+                    }
+                    break;
+                case "checkbox":
+                case "radio":
+                    if(!el.checked){
+                        break;
+                    }
+                default:
+                    if(el.name.length){
+                        params.push(encode(el.name) + "=" + encode(el.value));
+                    }
+            }
+        }
+        return params.join("&");
+    }
+</script>
+</body>
+</html>
