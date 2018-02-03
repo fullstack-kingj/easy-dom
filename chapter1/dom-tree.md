@@ -38,24 +38,36 @@ DOM 之所以可以访问和更新 HTML 页面中的内容、结构和样式，�
 
 在 DOM 树结构中，主要由以下 4 种节点组成:
 
-| 节点名称 | 含义 | 描述 |
+| 常量 | 值 | 描述 |
 | --- | --- | --- |
-| 文档节点 | 表示整个 HTML 页面（相当于 document 对象）| 当需要访问任何标签、属性或文本时，都可以通过文档节点进行导航 |
-| 元素节点 | 表示 HTML 页面中的标签（即 HTML 页面的结构）| 当访问 DOM 树时，需要从查找元素节点开始 |
-| 属性节点 | 表示 HTML 页面中的开始标签包含的属性 | - |
-| 文本节点 | 表示 HTML 页面中的标签所包含的文本内容 | - |
+| Node.DOCUMENT_NODE | 9 | 文档节点，表示整个 HTML 页面（相当于 document 对象）|
+| Node.ELEMENT_NODE | 1 | 元素节点，表示 HTML 页面中的标签（即 HTML 页面的结构）|
+| Node.ATTRIBUTE_NODE | 2 | 属性节点，表示 HTML 页面中的开始标签包含的属性。在 DOM4 规范里Node 接口将不再实现这个元素属性 |
+| Node.TEXT_NODE | 3 | 文本节点，表示 HTML 页面中的标签所包含的文本内容 |
 
-> 除了上面 4 种常见的节点类型以外，DOM 树结构中还具有很多节点类型。
+除了上面 4 种常见的节点类型以外，DOM 树结构中还具有很多节点类型。如下图表所示:
 
-![](images/04.png)
+| 常量 | 值 | 描述 |
+| --- | --- | --- |
+| Node.PROCESSING_INSTRUCTION_NODE | 7 | 一个用于XML文档的 ProcessingInstruction ，例如 <?xml-stylesheet ... ?> 声明 |
+| Node.COMMENT_NODE | 8 | Comment 节点 |
+| Node.DOCUMENT_TYPE_NODE | 10 | DocumentType 节点。例如 <!DOCTYPE html>  就是用于 HTML5 的 |
+| Node.DOCUMENT_FRAGMENT_NODE | 11 | DocumentFragment 节点 |
 
-> 还有一些节点类型，目前已被废弃（不再使用）。
+还有一些节点类型，目前已被废弃（不再使用）。如下图表所示:
 
-![](images/05.png)
+| 常量 | 值 | 描述 |
+| --- | --- | --- |
+| Node.CDATA_SECTION_NODE | 4 |  CDATASection。 在 [DOM4](https://www.w3.org/TR/dom/) 规范里被移除 |
+| Node.ENTITY_REFERENCE_NODE | 5 |  XML 实体引用节点。 在 [DOM4](https://www.w3.org/TR/dom/) 规范里被移除 |
+| Node.ENTITY_NODE | 6 | XML <!ENTITY ...>  节点。 在 [DOM4](https://www.w3.org/TR/dom/) 规范中被移除 |
+| Node.NOTATION_NODE | 12 | XML <!NOTATION ...> 节点。 在 [DOM4](https://www.w3.org/TR/dom/) 规范里被移除 |
+
+> **说明:** 上述图表摘自 Mozilla 开发者社区。
 
 ## DOM 节点树结构
 
-通过**节点**概念，我们可以将原本的 DOM 树结构改成 DOM 节点树结构进行表示。
+通过**节点**概念，我们可以将原本的 DOM 树结构改成 DOM 节点树结构进行表示。如下图所示:
 
 ![](images/06.png)
 
