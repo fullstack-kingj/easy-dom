@@ -1,18 +1,6 @@
 ## DOM 是什么
 
-DOM 被设计用于解析 HTML 页面文档，方便 JavaScript 语言通过 DOM 访问和操作 HTML 页面中的内容。
-
-DOM 是由 W3C 组织定义标准规范，并且由各大浏览器厂商支持。严格意义上来讲，DOM 并非属于 JavaScript 语言。
-
-> 在其他开发语言中，也支持 DOM 的标准规范，例如 PHP 语言。
-
-我们之所以可以在 JavaScript 语言中使用 DOM，是因为各大浏览器将 DOM 的标准规范内容封装成了 JavaScript 语言所支持的形式。
-
-对于 DOM 中的对象，我们只有调用的权限，没有修改的权限，也说明了这个问题。
-
-### DOM 的具体含义是什么
-
-DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文档对象模型**。
+DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文档对象模型**。如下图所示:
 
 ![](images/01.png)
 
@@ -24,11 +12,23 @@ DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文�
 
 > **模型（Model）**主要是指 DOM 树结构。
 
+### DOM 是用来做什么的
+
+DOM 被设计用于解析 HTML 页面文档，方便 JavaScript 语言通过 DOM 访问和操作 HTML 页面中的内容。
+
+DOM 是由 W3C 组织定义标准规范，并且由各大浏览器厂商支持。严格意义上来讲，DOM 并非属于 JavaScript 语言。
+
+> 在其他开发语言中，也支持 DOM 的标准规范，例如 PHP 语言。
+
+我们之所以可以在 JavaScript 语言中使用 DOM，是因为各大浏览器将 DOM 的标准规范内容封装成了 JavaScript 语言所支持的形式。
+
+对于 DOM 中的对象，我们只有调用的权限，没有修改的权限，也说明了这个问题。
+
 ### DOM 是如何解析 HTML 页面的呢
 
 浏览器加载并运行 HTML 页面后，会创建 DOM 结构。由于 DOM 中的内容被封装成了 JavaScript 语言中的对象，所以我们可以使用 JavaScript 语言通过 DOM 结构来访问和操作 HTML 页面中的内容。
 
-换句话讲，DOM 可以理解为是 HTML 页面与 JavaScript 语言之间的一个桥梁。
+换句话讲，DOM 可以理解为是 HTML 页面与 JavaScript 语言之间的一个桥梁（当然，这种理解并不准确）。如下图所示:
 
 ![](images/02.png)
 
@@ -38,7 +38,7 @@ DOM 其实是个缩写，全称是 **Document Object Model**，被译为 **文�
 
 下面这段英文描述，就是 W3C 对 DOM 的定义原文:
 
-> The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
+> The Document Object Model is a platform and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
 
 下面这段是本人的翻译（仅供参考）:
 
@@ -61,11 +61,15 @@ className += ' animate';
 btn.className = className;
 ```
 
+上述示例代码通过 id 属性值 btn 获取页面中指定元素，并为该元素的 class 属性添加了名为 animate 的样式名称。
+
+> **说明:** 上述示例代码中 `className += ' animate';` 中的空格，请参看第五章第六节《设置 class 属性》中的内容。
+
 ### DOM 的作用
 
 通过 W3C 的定义，我们还可以知道 DOM 主要是用来解析 HTML 页面的。也就是只要支持 DOM 的标准规范的开发语言，都可以通过 DOM 访问和更新 HTML 页面的内容、结构和样式。
 
-> 早期的 DOM 除了可以访问和更新 HTML 页面外，还可以访问和更新 XML 文档。但目前 XML 文档的使用场景越来越少，再加上 Web 前端开发需求越来越多。导致 DOM 主要用来访问和更新 HTML 页面了。
+> 早期的 DOM 除了可以访问和更新 HTML 页面外，还可以访问和更新 XML 文档。但目前 XML 文档的使用场景越来越少，再加上 Web 前端开发需求越来越多,导致 DOM 主要用来访问和更新 HTML 页面了。
 
 ## 浏览器的支持
 
