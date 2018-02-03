@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本内容的选择</title>
+</head>
+<body>
+<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    /*var username = document.getElementById('username');
+    username.select();*/
+
+    var username = document.getElementById('username');
+    /*username.addEventListener('focus',function(){
+        username.select();
+    });*/
+
+    /*username.addEventListener('select',function(){
+        console.log("this input element's select()");
+    });*/
+
+    /*username.addEventListener('select',function(){
+        var textValue = username.value;
+        var result = textValue.substring(username.selectionStart, username.selectionEnd);
+        console.log(result);
+    });*/
+
+    username.addEventListener('focus',function(){
+        username.setSelectionRange(0, -1);
+    });
+
+</script>
+</body>
+</html>
