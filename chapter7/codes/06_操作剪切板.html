@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作剪切板</title>
+</head>
+<body>
+<!--<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    var username = document.getElementById('username');
+
+    username.addEventListener('copy',callback);
+    username.addEventListener('cut',callback);
+    username.addEventListener('paste',callback);
+
+    function callback(event){
+        var target = event.target || event.srcElement;
+        target.value = event.type;
+    }
+</script>-->
+<form id="myform" action="#">
+    请输入你的用户名
+    <input type="text" id="username" name="username" value="">
+</form>
+<script>
+    var username = document.getElementById('username');
+    username.addEventListener('paste',function(event){
+        var target = event.target || event.srcElement;
+        var clipboardData = event.clipboardData || window.clipboardData;
+
+        var value = clipboardData.getData('text');
+        target.value = value;
+
+        event.preventDefault();
+    });
+</script>
+</body>
+</html>

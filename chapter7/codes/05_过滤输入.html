@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤输入</title>
+</head>
+<body>
+<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    var username = document.getElementById('username');
+
+    /*username.addEventListener('keypress',function(event){
+        event.preventDefault();// 阻止默认行为
+    });*/
+
+    username.addEventListener('keypress',function(event){
+        var charCode = event.key;
+        console.log(charCode);
+        if (!/\d/.test(charCode)) {
+            event.preventDefault();// 阻止默认行为
+        }
+    });
+</script>
+</body>
+</html>

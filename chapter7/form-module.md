@@ -149,3 +149,125 @@ inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectio
 
 > **注意:** IE8 及之前版本的浏览器并不支持这个方法。
 
+### 过滤输入
+
+在实际开发中，我们经常需要用户输入特定的内容，或者过滤不允许用户输入的内容。而利用 DOM 中的事件和 JavaScript 语言中的一些内容，就可以将一个普通的文本输入框改变成带有功能的控件。
+
+#### 1. 屏蔽字符
+
+有时候，我们需要用户输入特定的文本内容或者不能输入特定的文本内容，例如电话号码中不能出现非数字的文本内容等。
+
+我们可以通过为指定文本输入框元素注册 keypress 事件，并且在该事件的处理函数中阻止默认行为的方式实现屏蔽字符的功能。如下示例代码所示:
+
+```html
+<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    var username = document.getElementById('username');
+
+    username.addEventListener('keypress',function(event){
+        event.preventDefault();// 阻止默认行为
+    });
+</script>
+```
+
+上述示例代码阻止了 keypress 事件，导致该文本输入框元素变成了只读的。
+
+> **注意:** 上述示例代码无法屏蔽中文输入法输入的文本内容。
+
+当然，如果想要屏蔽指定的文本内容的话，只需在 keypress 事件的处理函数中利用正则表达式检测用户输入的内容，再做出相应的反馈即可。如下示例代码所示:
+
+```html
+<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    var username = document.getElementById('username');
+
+    username.addEventListener('keypress',function(event){
+        var charCode = event.key;
+        console.log(charCode);
+        if (!/\d/.test(charCode)) {
+            event.preventDefault();// 阻止默认行为
+        }
+    });
+</script>
+```
+
+上述示例代码中在 keypress 事件的处理函数中，先是获取了用户输入的文本内容，再判断是否为数字，如果不是则阻止输入。换句话讲，上述示例代码实现了只能允许用户输入数字内容。
+
+#### 2. 操作剪切板
+
+剪切板功能是经常被忽略，却很重要的功能，可以增强用户体验，方便用户交互。以下三个事件是剪切板的主要操作:
+
+| 事件名称 | 描述 |
+| --- | --- |
+| copy | 在发生复制操作时触发，对应的快捷键为 Ctrl/Cmd + C |
+| cut | 在发生剪切操作时触发，对应的快捷键为 Ctrl/Cmd + X |
+| paste | 在发生粘贴操作时触发，对应的快捷键为 Ctrl/Cmd + V |
+
+由于没有针对剪贴板操作的标准，这些事件及相关对象会因浏览器而异。如下图所示，就是上述三个事件的浏览器兼容性情况:
+
+![](images/07.png)
+
+我们可以通过以下示例代码，学习上述三个事件的使用:
+
+```html
+<form id="myform" action="#">
+    <input type="text" id="username" name="username" value="请输入你的用户名">
+</form>
+<script>
+    var username = document.getElementById('username');
+
+    username.addEventListener('copy',callback);
+    username.addEventListener('cut',callback);
+    username.addEventListener('paste',callback);
+
+    function callback(event){
+        var target = event.target || event.srcElement;
+        target.value = event.type;
+    }
+</script>
+```
+
+上述示例代码将触发的事件类型输出在指定的输入框中。
+
+Event 事件对象的 clipboardData 属性存储了由用户触发剪切板事件时所影响的带有 MIME 类型的数据。
+
+> **注意:** 如果是 IE 8及之前版本的浏览器的话，clipboardData 属性需要通过 window 对象获取。
+
+```javascript
+var clipboardData = event.clipboardData || window.clipboardData;
+```
+
+该属性得到的是一个 DataTransfer 对象，该对象提供了操作数据的常用方法，如下表所示:
+
+| 方法名称 | 描述 |
+| --- | --- |
+| setData(in String type, in String data) | 为一个给定的类型设置数据 |
+| getData(in String type) | 根据指定的类型检索数据 |
+| clearData([in String type]) | 删除与给定类型关联的数据 |
+
+我们可以通过以下示例代码，学习如何使用上述 DataTransfer 对象的三个方法:
+
+```html
+<form id="myform" action="#">
+    请输入你的用户名
+    <input type="text" id="username" name="username" value="">
+</form>
+<script>
+    var username = document.getElementById('username');
+    username.addEventListener('paste',function(event){
+        var target = event.target || event.srcElement;
+        var clipboardData = event.clipboardData || window.clipboardData;
+
+        var value = clipboardData.getData('text');
+        target.value = value;
+
+        event.preventDefault();
+    });
+</script>
+```
+
+上述示例代码禁用了默认的粘贴事件，通过 clipboardData 属性的 getData() 方法获取剪切板中的数据并赋值给指定的输入框。
