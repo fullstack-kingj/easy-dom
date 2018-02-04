@@ -1,5 +1,6 @@
 {
 	"title": "EASYDOM - 可能是最适合你的 DOM 课程",
+	"description": "EASYDOM 课程，可能是最适合你的 DOM 课程。",
 	"author": "全栈讲师-金云龙",
 	"language": "zh-hans",
 	"links": {
@@ -18,7 +19,10 @@
 		"tbfed-pagefooter",
 		"expandable-chapters-small",
 		"donate",
-		"github-issue-feedback"
+		"github-issue-feedback",
+		"expandable-chapters-small",
+		"favicon",
+		"3-ba"
 	],
 	"pluginsConfig": {
 	    "github": {
@@ -71,6 +75,13 @@
 		},
 		"github-issue-feedback": {
             "repo": "jyl/easy-dom"
+        },
+		"favicon": {
+            "shortcut": "images/favicon.ico",
+            "bookmark": "images/favicon.ico"
+		},
+		"3-ba": {
+            "token": "23a689e990c2c23684d753e695797e27"
         }
 	}
 }
