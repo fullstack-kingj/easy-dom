@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLOptionElement对象</title>
+</head>
+<body>
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+    var optElem = selectbox.options[0];
+
+    console.log('当前选项的索引值: ' + optElem.index);
+    console.log('当前选项是否被选中: ' + optElem.selected);
+    console.log('当前选项的文本为: ' + optElem.text);
+    console.log('当前选项的value为: ' + optElem.value);
+</script>
+</body>
+</html>

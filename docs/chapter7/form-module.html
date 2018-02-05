@@ -1073,8 +1073,415 @@
 <blockquote>
 <p><strong>&#x6CE8;&#x610F;:</strong> IE8 &#x53CA;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
 </blockquote>
+<h3 id="&#x8FC7;&#x6EE4;&#x8F93;&#x5165;">&#x8FC7;&#x6EE4;&#x8F93;&#x5165;</h3>
+<p>&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6216;&#x8005;&#x8FC7;&#x6EE4;&#x4E0D;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x800C;&#x5229;&#x7528; DOM &#x4E2D;&#x7684;&#x4E8B;&#x4EF6;&#x548C; JavaScript &#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6846;&#x6539;&#x53D8;&#x6210;&#x5E26;&#x6709;&#x529F;&#x80FD;&#x7684;&#x63A7;&#x4EF6;&#x3002;</p>
+<h4 id="1-&#x5C4F;&#x853D;&#x5B57;&#x7B26;">1. &#x5C4F;&#x853D;&#x5B57;&#x7B26;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x6216;&#x8005;&#x4E0D;&#x80FD;&#x8F93;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#xFF0C;&#x4F8B;&#x5982;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x4E2D;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x975E;&#x6570;&#x5B57;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7B49;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E3A;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6846;&#x5143;&#x7D20;&#x6CE8;&#x518C; keypress &#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5C4F;&#x853D;&#x5B57;&#x7B26;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> username = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;username&apos;</span>);
+
+    username.addEventListener(<span class="hljs-string">&apos;keypress&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+        event.preventDefault();<span class="hljs-comment">// &#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</span>
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x963B;&#x6B62;&#x4E86; keypress &#x4E8B;&#x4EF6;&#xFF0C;&#x5BFC;&#x81F4;&#x8BE5;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6846;&#x5143;&#x7D20;&#x53D8;&#x6210;&#x4E86;&#x53EA;&#x8BFB;&#x7684;&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;:</strong> &#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x65E0;&#x6CD5;&#x5C4F;&#x853D;&#x4E2D;&#x6587;&#x8F93;&#x5165;&#x6CD5;&#x8F93;&#x5165;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5C4F;&#x853D;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x9700;&#x5728; keypress &#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x68C0;&#x6D4B;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x518D;&#x505A;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x53CD;&#x9988;&#x5373;&#x53EF;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> username = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;username&apos;</span>);
+
+    username.addEventListener(<span class="hljs-string">&apos;keypress&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+        <span class="hljs-keyword">var</span> charCode = event.key;
+        <span class="hljs-built_in">console</span>.log(charCode);
+        <span class="hljs-keyword">if</span> (!<span class="hljs-regexp">/\d/</span>.test(charCode)) {
+            event.preventDefault();<span class="hljs-comment">// &#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</span>
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4E2D;&#x5728; keypress &#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x5148;&#x662F;&#x83B7;&#x53D6;&#x4E86;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#xFF0C;&#x518D;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5219;&#x963B;&#x6B62;&#x8F93;&#x5165;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BB2;&#xFF0C;&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4E86;&#x53EA;&#x80FD;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6570;&#x5B57;&#x5185;&#x5BB9;&#x3002;</p>
+<h4 id="2-&#x64CD;&#x4F5C;&#x526A;&#x5207;&#x677F;">2. &#x64CD;&#x4F5C;&#x526A;&#x5207;&#x677F;</h4>
+<p>&#x526A;&#x5207;&#x677F;&#x529F;&#x80FD;&#x662F;&#x7ECF;&#x5E38;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x5374;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x589E;&#x5F3A;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x3002;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x4E8B;&#x4EF6;&#x662F;&#x526A;&#x5207;&#x677F;&#x7684;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>copy</td>
+<td>&#x5728;&#x53D1;&#x751F;&#x590D;&#x5236;&#x64CD;&#x4F5C;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x4E3A; Ctrl/Cmd + C</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>&#x5728;&#x53D1;&#x751F;&#x526A;&#x5207;&#x64CD;&#x4F5C;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x4E3A; Ctrl/Cmd + X</td>
+</tr>
+<tr>
+<td>paste</td>
+<td>&#x5728;&#x53D1;&#x751F;&#x7C98;&#x8D34;&#x64CD;&#x4F5C;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x4E3A; Ctrl/Cmd + V</td>
+</tr>
+</tbody>
+</table>
+<p>&#x7531;&#x4E8E;&#x6CA1;&#x6709;&#x9488;&#x5BF9;&#x526A;&#x8D34;&#x677F;&#x64CD;&#x4F5C;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E8B;&#x4EF6;&#x53CA;&#x76F8;&#x5173;&#x5BF9;&#x8C61;&#x4F1A;&#x56E0;&#x6D4F;&#x89C8;&#x5668;&#x800C;&#x5F02;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x5C31;&#x662F;&#x4E0A;&#x8FF0;&#x4E09;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x6027;&#x60C5;&#x51B5;:</p>
+<p><img src="images/07.png" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x4E0A;&#x8FF0;&#x4E09;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x4F7F;&#x7528;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> username = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;username&apos;</span>);
+
+    username.addEventListener(<span class="hljs-string">&apos;copy&apos;</span>,callback);
+    username.addEventListener(<span class="hljs-string">&apos;cut&apos;</span>,callback);
+    username.addEventListener(<span class="hljs-string">&apos;paste&apos;</span>,callback);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params">event</span>)</span>{
+        <span class="hljs-keyword">var</span> target = event.target || event.srcElement;
+        target.value = event.type;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5C06;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x8F93;&#x51FA;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#x3002;</p>
+<p>Event &#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684; clipboardData &#x5C5E;&#x6027;&#x5B58;&#x50A8;&#x4E86;&#x7531;&#x7528;&#x6237;&#x89E6;&#x53D1;&#x526A;&#x5207;&#x677F;&#x4E8B;&#x4EF6;&#x65F6;&#x6240;&#x5F71;&#x54CD;&#x7684;&#x5E26;&#x6709; MIME &#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;:</strong> &#x5982;&#x679C;&#x662F; IE 8&#x53CA;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8BDD;&#xFF0C;clipboardData &#x5C5E;&#x6027;&#x9700;&#x8981;&#x901A;&#x8FC7; window &#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clipboardData = event.clipboardData || <span class="hljs-built_in">window</span>.clipboardData;
+</code></pre>
+<p>&#x8BE5;&#x5C5E;&#x6027;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A; DataTransfer &#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setData(in String type, in String data)</td>
+<td>&#x4E3A;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>getData(in String type)</td>
+<td>&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x68C0;&#x7D22;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>clearData([in String type])</td>
+<td>&#x5220;&#x9664;&#x4E0E;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x5173;&#x8054;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0; DataTransfer &#x5BF9;&#x8C61;&#x7684;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    &#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> username = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;username&apos;</span>);
+    username.addEventListener(<span class="hljs-string">&apos;paste&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+        <span class="hljs-keyword">var</span> target = event.target || event.srcElement;
+        <span class="hljs-keyword">var</span> clipboardData = event.clipboardData || <span class="hljs-built_in">window</span>.clipboardData;
+
+        <span class="hljs-keyword">var</span> value = clipboardData.getData(<span class="hljs-string">&apos;text&apos;</span>);
+        target.value = value;
+
+        event.preventDefault();
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x7981;&#x7528;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;&#x7C98;&#x8D34;&#x4E8B;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; clipboardData &#x5C5E;&#x6027;&#x7684; getData() &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x526A;&#x5207;&#x677F;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x8F93;&#x5165;&#x6846;&#x3002;</p>
+<h2 id="&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x7684;&#x64CD;&#x4F5C;">&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x7684;&#x64CD;&#x4F5C;</h2>
+<p>&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x662F;&#x7531; <code>&lt;select&gt;</code> &#x548C; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x521B;&#x5EFA;&#x7684;&#x3002;<code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x5728; DOM &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x662F; HTMLSelectElement &#x5BF9;&#x8C61;&#xFF0C;<code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x5728; DOM &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x662F; HTMLOptionElement &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x4FBF;&#x64CD;&#x4F5C;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x3002;</p>
+<h3 id="htmlselectelement-&#x5BF9;&#x8C61;">HTMLSelectElement &#x5BF9;&#x8C61;</h3>
+<p>HTMLSelectElement &#x5BF9;&#x8C61;&#x662F; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x5728; DOM &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#x7684;&#x65B9;&#x5F0F;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>elements[]</code> &#x4E2D;&#x4F20;&#x9012;&#x7684;&#x662F; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x7684; name &#x5C5E;&#x6027;&#x503C;&#x3002;</p>
+<p>HTMLSelectElement &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>&#x8868;&#x793A;&#x5F53;&#x524D; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x4E2D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</td>
+</tr>
+<tr>
+<td>multiple</td>
+<td>&#x8868;&#x793A; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x591A;&#x9879;&#x9009;&#x62E9;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E; HTML &#x4E2D;&#x7684; multiple &#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td>options</td>
+<td>&#x5F53;&#x524D; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x4E2D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x5BF9;&#x8C61;&#x7684;&#x96C6;&#x5408;</td>
+</tr>
+<tr>
+<td>selectedIndex</td>
+<td>&#x4EE3;&#x8868;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x9009;&#x4E2D;&#x7684; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x3002;-1 &#x4EE3;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x88AB;&#x9009;&#x4E2D;</td>
+</tr>
+<tr>
+<td>size</td>
+<td>&#x5F53;&#x524D; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x4E2D;&#x53EF;&#x89C1;&#x7684;&#x884C;&#x6570;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E; HTML &#x4E2D;&#x7684; size &#x5C5E;&#x6027;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-&#x4E0B;&#x62C9;&#x5355;&#x9009;&#x6846;">1. &#x4E0B;&#x62C9;&#x5355;&#x9009;&#x6846;</h4>
+<p>&#x4E0B;&#x62C9;&#x5355;&#x9009;&#x6846;&#x5C31;&#x662F;&#x6307;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x4E00;&#x4E2A; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0; HTMLSelectElement &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sex&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mysex&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;male&quot;</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;female&quot;</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;sex&apos;</span>];
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E0B;&#x62C9;&#x5217;&#x8868;&lt;option&gt;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;: &apos;</span> + selectbox.length);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x88AB;&#x9009;&#x4E2D;&#x7684;&lt;option&gt;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x503C;:&apos;</span> + selectbox.selectedIndex);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;:</strong> selectedIndex &#x5C5E;&#x6027;&#x53EA;&#x80FD;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x9009;&#x4E2D;&#x7684; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x3002;</p>
+</blockquote>
+<h4 id="2-&#x4E0B;&#x62C9;&#x591A;&#x9009;&#x6846;">2. &#x4E0B;&#x62C9;&#x591A;&#x9009;&#x6846;</h4>
+<p>&#x4E0B;&#x62C9;&#x591A;&#x9009;&#x6846;&#x5C31;&#x662F;&#x6307;&#x6BCF;&#x6B21;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x591A;&#x4E2A; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#xFF08;<strong>&#x5FC5;&#x987B;&#x5B9A;&#x4E49; multiple &#x5C5E;&#x6027;</strong>&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; size &#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0; HTMLSelectElement &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x662F;&#x5426;&#x4E3A;&#x591A;&#x9009;:&apos;</span> + selectbox.multiple);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x7684;&#x4E2A;&#x6570;:&apos;</span> + selectbox.size);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>HTMLSelectElement &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add(item[, before])</td>
+<td>&#x5C06; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x7684;&#x9009;&#x9879;&#x5143;&#x7D20;&#x96C6;&#x5408;&#x4E2D;</td>
+</tr>
+<tr>
+<td>item(idx)</td>
+<td>&#x653E;&#x56DE;&#x7D22;&#x5F15;&#x503C;&#x4E3A; idx &#x7684; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; null</td>
+</tr>
+<tr>
+<td>remove(index)</td>
+<td>&#x4ECE;&#x5F53;&#x524D; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x7684;&#x9009;&#x9879;&#x5143;&#x7D20;&#x96C6;&#x5408;&#x4E2D;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x503C;&#x7684; <code>&lt;option&gt;</code> &#x5143;&#x7D20;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-&#x6DFB;&#x52A0;&#x9009;&#x9879;">3. &#x6DFB;&#x52A0;&#x9009;&#x9879;</h4>
+<p>&#x60F3;&#x8981;&#x52A8;&#x6001;&#x521B;&#x5EFA; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x5E76;&#x4E14;&#x6DFB;&#x52A0;&#x5230;&#x6307;&#x5B9A; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x7684;&#x9009;&#x9879;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x638C;&#x63E1;&#x521B;&#x5EFA;&#x8282;&#x70B9;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    <span class="hljs-keyword">var</span> optionElem = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;option&apos;</span>);
+    optionElem.appendChild(<span class="hljs-built_in">document</span>.createTextNode(<span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>));
+    optionElem.setAttribute(<span class="hljs-string">&apos;value&apos;</span>,<span class="hljs-string">&apos;shanghai&apos;</span>);
+
+    selectbox.appendChild(optionElem);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7; HTMLOptionElement &#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570; Option() &#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    <span class="hljs-keyword">var</span> optionElem = <span class="hljs-keyword">new</span> Option(<span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,<span class="hljs-string">&apos;shanghai&apos;</span>);
+
+    selectbox.appendChild(optionElem);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;:</strong> &#x4E0A;&#x8FF0;&#x7684;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x5728; IE 8&#x53CA;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x8BBE;&#x7F6E;&#x65B0;&#x9009;&#x9879;&#x7684;&#x6587;&#x672C;&#x3002;</p>
+</blockquote>
+<p>&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528; HTMLSelectElement &#x5BF9;&#x8C61;&#x7684; add() &#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    <span class="hljs-keyword">var</span> optionElem = <span class="hljs-keyword">new</span> Option(<span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,<span class="hljs-string">&apos;shanghai&apos;</span>);
+
+    selectbox.add(optionElem);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x65B0;&#x9009;&#x9879;&#x6DFB;&#x52A0;&#x5230;&#x4E86; <code>&lt;select&gt;</code> &#x5143;&#x7D20;&#x7684;&#x9009;&#x9879;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x9762;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+    <span class="hljs-keyword">var</span> oldOptn = selectbox.options[<span class="hljs-number">2</span>];
+
+    <span class="hljs-keyword">var</span> optionElem = <span class="hljs-keyword">new</span> Option(<span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,<span class="hljs-string">&apos;shanghai&apos;</span>);
+
+    selectbox.add(optionElem, oldOptn);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x6DFB;&#x52A0;&#x9009;&#x9879;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E0D;&#x4EC5;&#x4EE3;&#x7801;&#x66F4;&#x5C11;&#xFF0C;&#x800C;&#x4E14;&#x6CA1;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#x3002;</p>
+<h4 id="2-&#x5220;&#x9664;&#x9009;&#x9879;">2. &#x5220;&#x9664;&#x9009;&#x9879;</h4>
+<p>&#x548C;&#x6DFB;&#x52A0;&#x9009;&#x9879;&#x7C7B;&#x4F3C;&#xFF0C;&#x5220;&#x9664;&#x9009;&#x9879;&#x4E5F;&#x5177;&#x6709;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x4F7F;&#x7528; DOM &#x4E2D; Node &#x5BF9;&#x8C61;&#x7684; removeChild() &#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    selectbox.removeChild(selectbox.options[<span class="hljs-number">1</span>]);<span class="hljs-comment">// &#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x9879;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528; HTMLSelectElement &#x5BF9;&#x8C61;&#x7684; remove() &#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    selectbox.remove(<span class="hljs-number">1</span>);<span class="hljs-comment">// &#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x9879;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528; null &#x503C;&#x91CA;&#x653E;&#x8D44;&#x6E90;&#x7684;&#x7279;&#x6027;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+
+    selectbox.options[<span class="hljs-number">1</span>] = <span class="hljs-literal">null</span>;<span class="hljs-comment">// &#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x9879;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="htmloptionelement-&#x5BF9;&#x8C61;">HTMLOptionElement &#x5BF9;&#x8C61;</h3>
+<p>HTMLOptionElement &#x5BF9;&#x8C61;&#x662F; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x5728; DOM &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#x7684;&#x65B9;&#x5F0F;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> optElem = selectbox.options[index];
+</code></pre>
+<p>&#x800C;&#x4E0D;&#x63A8;&#x8350;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;  <code>&lt;option&gt;</code> &#x5143;&#x7D20;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> optElem = selectbox.childNodes[index];
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7A7A;&#x767D;&#x8282;&#x70B9;&#x95EE;&#x9898;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5229;&#x7528; Element &#x5BF9;&#x8C61;&#x7684; getElementsByTagName() &#x65B9;&#x6CD5;&#x83B7;&#x53D6;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> opsElem = selectbox.getElementsByTagName(<span class="hljs-string">&apos;option&apos;</span>)[index];
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x901A;&#x8FC7;&#x67E5;&#x627E; DOM &#x6811;&#x7ED3;&#x6784;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>HTMLOptionElement &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>&#x5F53;&#x524D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x5728;&#x5176;&#x6240;&#x5C5E;&#x7684;&#x9009;&#x9879;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x503C;</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>&#x8868;&#x793A;&#x5F53;&#x524D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x662F;&#x5426;&#x88AB;&#x9009;&#x4E2D;</td>
+</tr>
+<tr>
+<td>text</td>
+<td>&#x5F53;&#x524D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>value</td>
+<td>&#x5F53;&#x524D; <code>&lt;option&gt;</code> &#x5143;&#x7D20;&#x7684; value &#x5C5E;&#x6027;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528; HTMLOptionElement &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myform&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mylocation&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;beijing&quot;</span>&gt;</span>&#x5317;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;nanjing&quot;</span>&gt;</span>&#x5357;&#x4EAC;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tianjin&quot;</span>&gt;</span>&#x5929;&#x6D25;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;chongqing&quot;</span>&gt;</span>&#x91CD;&#x5E86;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> selectbox = <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[<span class="hljs-string">&apos;location&apos;</span>];
+    <span class="hljs-keyword">var</span> optElem = selectbox.options[<span class="hljs-number">0</span>];
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x9009;&#x9879;&#x7684;&#x7D22;&#x5F15;&#x503C;: &apos;</span> + optElem.index);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x9009;&#x9879;&#x662F;&#x5426;&#x88AB;&#x9009;&#x4E2D;: &apos;</span> + optElem.selected);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x9009;&#x9879;&#x7684;&#x6587;&#x672C;&#x4E3A;: &apos;</span> + optElem.text);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x9009;&#x9879;&#x7684;value&#x4E3A;: &apos;</span> + optElem.value);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; www.longestory.com 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-01-14 16:21:15
+2018-02-05 13:07:19
 </span></footer>
                                 
                                 </section>
@@ -1118,7 +1525,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二节 表单操作","level":"1.8.2","depth":2,"next":{"title":"第三节 表单验证","level":"1.8.3","depth":2,"path":"chapter7/form-validate.md","ref":"chapter7/form-validate.md","articles":[]},"previous":{"title":"第一节 获取表单","level":"1.8.1","depth":2,"path":"chapter7/get-form-element.md","ref":"chapter7/get-form-element.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","github-buttons","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","donate","github-issue-feedback","expandable-chapters-small","favicon","3-ba"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.longestory.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github-issue-feedback":{"repo":"jyl/easy-dom"},"github":{"url":"https://github.com/jyl/easy-dom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"http://osryplwmc.bkt.clouddn.com/18-1-12/65831669.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"http://osryplwmc.bkt.clouddn.com/18-1-12/14192742.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"github-buttons":{"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]},"3-ba":{"configuration":"auto","token":"23a689e990c2c23684d753e695797e27"},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"全栈讲师-金云龙","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"EASYDOM - 可能是最适合你的 DOM 课程","language":"zh-hans","links":{"sidebar":{"作者的博客":"http://www.longestory.com"}},"gitbook":"*","description":"EASYDOM 课程，可能是最适合你的 DOM 课程。"},"file":{"path":"chapter7/form-module.md","mtime":"2018-01-14T08:21:15.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-04T09:35:56.369Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二节 表单操作","level":"1.8.2","depth":2,"next":{"title":"第三节 表单验证","level":"1.8.3","depth":2,"path":"chapter7/form-validate.md","ref":"chapter7/form-validate.md","articles":[]},"previous":{"title":"第一节 获取表单","level":"1.8.1","depth":2,"path":"chapter7/get-form-element.md","ref":"chapter7/get-form-element.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","github-buttons","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","donate","github-issue-feedback","expandable-chapters-small","favicon","3-ba"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.longestory.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github-issue-feedback":{"repo":"jyl/easy-dom"},"github":{"url":"https://github.com/jyl/easy-dom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"http://osryplwmc.bkt.clouddn.com/18-1-12/65831669.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"http://osryplwmc.bkt.clouddn.com/18-1-12/14192742.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"github-buttons":{"buttons":[{"user":"jyl","repo":"easy-dom","type":"star","size":"small","count":true}]},"3-ba":{"configuration":"auto","token":"23a689e990c2c23684d753e695797e27"},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"全栈讲师-金云龙","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"EASYDOM - 可能是最适合你的 DOM 课程","language":"zh-hans","links":{"sidebar":{"作者的博客":"http://www.longestory.com"}},"gitbook":"*","description":"EASYDOM 课程，可能是最适合你的 DOM 课程。"},"file":{"path":"chapter7/form-module.md","mtime":"2018-02-05T05:07:19.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T05:08:27.910Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLSelectElement对象</title>
+</head>
+<body>
+<!--<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+    <select name="sex" id="mysex">
+        <option value="male">男</option>
+        <option value="female">女</option>
+    </select>
+</form>
+<script>
+    var selectbox1 = document.forms[0].elements['location'];
+
+    console.log('第一个下拉列表是否为多选:' + selectbox1.multiple);
+    console.log('第一个下拉列表默认显示的个数:' + selectbox1.size);
+
+    var selectbox2 = document.forms[0].elements['sex'];
+
+    console.log('第二个下拉列表<option>元素的个数: ' + selectbox2.length);
+    console.log('第二个下拉列表被选中的<option>元素的索引值:' + selectbox2.selectedIndex);
+</script>-->
+<!--<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    var oldOptn = selectbox.options[2];
+
+    /*var optionElem = document.createElement('option');
+    optionElem.appendChild(document.createTextNode('上海'));
+    optionElem.setAttribute('value','shanghai');*/
+
+    var optionElem = new Option('上海','shanghai');
+
+    /*selectbox.appendChild(optionElem);*/
+
+    selectbox.add(optionElem, oldOptn);
+</script>-->
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    //selectbox.removeChild(selectbox.options[1]);// 删除第二个选项
+    //selectbox.remove(1);
+    selectbox.options[1] = null;
+</script>
+</body>
+</html>

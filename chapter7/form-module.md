@@ -271,3 +271,281 @@ var clipboardData = event.clipboardData || window.clipboardData;
 ```
 
 上述示例代码禁用了默认的粘贴事件，通过 clipboardData 属性的 getData() 方法获取剪切板中的数据并赋值给指定的输入框。
+
+## 下拉列表的操作
+
+下拉列表是由 `<select>` 和 `<option>` 元素创建的。`<select>` 元素在 DOM 中对应的是 HTMLSelectElement 对象，`<option>` 元素在 DOM 中对应的是 HTMLOptionElement 对象，这两个对象都提供了一些属性和方法，方便操作下拉列表。
+
+### HTMLSelectElement 对象
+
+HTMLSelectElement 对象是 `<select>` 元素在 DOM 中对应的对象，在表单中获取该元素可以通过如下示例代码所示的方式:
+
+```javascript
+var selectbox = document.forms[0].elements['location'];
+```
+
+上述示例代码中，`elements[]` 中传递的是 `<select>` 元素的 name 属性值。
+
+HTMLSelectElement 对象提供的属性如下表所示:
+
+| 属性名称 | 描述 |
+| --- | --- |
+| length | 表示当前 `<select>` 元素中 `<option>` 元素的个数 |
+| multiple | 表示 `<select>` 元素是否允许多项选择，等价于 HTML 中的 multiple 属性 |
+| options | 当前 `<select>` 元素中 `<option>` 元素对象的集合 |
+| selectedIndex | 代表第一个被选中的 `<option>` 元素。-1 代表没有元素被选中 |
+| size | 当前 `<select>` 元素中可见的行数，等价于 HTML 中的 size 属性 |
+
+#### 1. 下拉单选框
+
+下拉单选框就是指每次只能选择一个 `<option>` 元素的下拉列表。
+
+我们可以通过如下示例代码，学习如何使用上述 HTMLSelectElement 对象的属性:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="sex" id="mysex">
+        <option value="male">男</option>
+        <option value="female">女</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['sex'];
+
+    console.log('下拉列表<option>元素的个数: ' + selectbox.length);
+    console.log('下拉列表被选中的<option>元素的索引值:' + selectbox.selectedIndex);
+</script>
+```
+
+> **注意:** selectedIndex 属性只能返回第一个被选中的 `<option>` 元素的索引值。
+
+#### 2. 下拉多选框
+
+下拉多选框就是指每次可以选择多个 `<option>` 元素的下拉列表（**必须定义 multiple 属性**），并且可以通过 size 属性设置默认显示的个数。
+
+我们可以通过如下示例代码，学习如何使用上述 HTMLSelectElement 对象的属性:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    console.log('第一个下拉列表是否为多选:' + selectbox.multiple);
+    console.log('第一个下拉列表默认显示的个数:' + selectbox.size);
+</script>
+```
+
+HTMLSelectElement 对象提供的方法如下表所示:
+
+| 属性名称 | 描述 |
+| --- | --- |
+| add(item[, before]) | 将 `<option>` 元素添加到当前 `<select>` 元素的选项元素集合中 |
+| item(idx) | 放回索引值为 idx 的 `<option>` 元素。如果没有，则返回 null |
+| remove(index) | 从当前 `<select>` 元素的选项元素集合中删除指定索引值的 `<option>` 元素 |
+
+#### 3. 添加选项
+
+想要动态创建 `<option>` 元素并且添加到指定 `<select>` 元素的选项列表中的话，可以有多种方式实现。
+
+第一种方式，利用之前已经掌握创建节点的方式实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    var optionElem = document.createElement('option');
+    optionElem.appendChild(document.createTextNode('上海'));
+    optionElem.setAttribute('value','shanghai');
+
+    selectbox.appendChild(optionElem);
+</script>
+```
+
+第二种方式，通过 HTMLOptionElement 对象的构造函数 Option() 实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    var optionElem = new Option('上海','shanghai');
+
+    selectbox.appendChild(optionElem);
+</script>
+```
+
+> **注意:** 上述的第二种方式在 IE 8及之前版本的浏览器，不能正确设置新选项的文本。
+
+第三种方式，利用 HTMLSelectElement 对象的 add() 方法实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    var optionElem = new Option('上海','shanghai');
+
+    selectbox.add(optionElem);
+</script>
+```
+
+上述示例代码，将新选项添加到了 `<select>` 元素的选项集合中的最后面。如果想要添加到指定位置的话，可以通过如下示例代码所示的方式实现:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+    var oldOptn = selectbox.options[2];
+
+    var optionElem = new Option('上海','shanghai');
+    
+    selectbox.add(optionElem, oldOptn);
+</script>
+```
+
+上述三种方式实现添加选项，建议使用第三种方式。第三种方式不仅代码更少，而且没有浏览器兼容性问题。
+
+#### 2. 删除选项
+
+和添加选项类似，删除选项也具有多种方式实现。首先，第一种方式就是使用 DOM 中 Node 对象的 removeChild() 方法实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    selectbox.removeChild(selectbox.options[1]);// 删除第二个选项
+</script>
+```
+
+第二种方式，利用 HTMLSelectElement 对象的 remove() 方法实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    selectbox.remove(1);// 删除第二个选项
+</script>
+```
+
+第三种方式，利用 null 值释放资源的特性实现。如下示例代码所示:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation" multiple size="5">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+
+    selectbox.options[1] = null;// 删除第二个选项
+</script>
+```
+
+### HTMLOptionElement 对象
+
+HTMLOptionElement 对象是 `<option>` 元素在 DOM 中对应的对象，在表单中获取该元素可以通过如下示例代码所示的方式:
+
+```javascript
+var optElem = selectbox.options[index];
+```
+
+而不推荐通过如下方式获取  `<option>` 元素:
+
+```javascript
+var optElem = selectbox.childNodes[index];
+```
+
+上述这种方式可能出现空白节点问题。当然，我们还可以利用 Element 对象的 getElementsByTagName() 方法获取:
+
+```javascript
+var opsElem = selectbox.getElementsByTagName('option')[index];
+```
+
+上述这种方式是通过查找 DOM 树结构实现。
+
+HTMLOptionElement 对象提供的方法如下表所示:
+
+| 属性名称 | 描述 |
+| --- | --- |
+| index | 当前 `<option>` 元素在其所属的选项列表中的索引值 |
+| selected | 表示当前 `<option>` 元素是否被选中 |
+| text | 当前 `<option>` 元素的文本内容 |
+| value | 当前 `<option>` 元素的 value 属性值 |
+
+我们可以通过如下示例代码，学习如何使用 HTMLOptionElement 对象的属性:
+
+```html
+<form id="myform" name="myform" action="#">
+    <select name="location" id="mylocation">
+        <option value="beijing">北京</option>
+        <option value="nanjing">南京</option>
+        <option value="tianjin">天津</option>
+        <option value="chongqing">重庆</option>
+    </select>
+</form>
+<script>
+    var selectbox = document.forms[0].elements['location'];
+    var optElem = selectbox.options[0];
+
+    console.log('当前选项的索引值: ' + optElem.index);
+    console.log('当前选项是否被选中: ' + optElem.selected);
+    console.log('当前选项的文本为: ' + optElem.text);
+    console.log('当前选项的value为: ' + optElem.value);
+</script>
+```
