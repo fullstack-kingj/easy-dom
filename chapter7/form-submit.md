@@ -65,18 +65,120 @@ method 属性定义了发送数据的方式，该属性的值由 HTTP 协议提�
 
 #### 1. GET 方式
 
+GET 方式是表单提交默认使用的请求方式。可以通过如下示例代码测试 GET 方式:
+
+```html
+<form action="#" method="get">
+    <input type="text" name="data">
+    <input type="submit" value="提交">
+</form>
+```
+
+通过上述示例代码提交表单的话，可以在浏览器的地址栏中看到如下图所示的结果:
+
+![](images/09.png)
+
+如上图所示，数据被附加到 URL 作为一系列的名称/值对。在 URL 地址结束之后，包括一个问号(?)，后面是名称/值对，每一个都由一个与符号(&)分隔开。
+
+通过浏览器提供的开发者工具的 Network 功能抓取网络信息，会得到如下图所示的效果:
+
+![](images/10.png)
+
+通过 GET 方式提交表单的话，会有以下问题:
+
+- GET 方式提交表单数据大小有限制，理论上最多只能是 1024 字节
+- GET 方式提交表单将数据添加到浏览器的地址栏，安全性较低
+
 #### 2. POST 方式
+
+POST 方式是表单提交比较常用的请求方式。可以通过如下示例代码测试 POST 方式:
+
+```html
+<form action="#" method="post">
+    <input type="text" name="data">
+    <input type="submit" value="提交">
+</form>
+```
+
+通过上述示例代码提交表单的话，可以发现在浏览器的地址栏中并没有任何变化，如下图所示:
+
+![](images/11.png)
+
+如上图所示，POST 方式提交表单时数据并没有被添加到 URL 地址中，而是被添加到了 HTTP 请求协议中。如下图所示:
+
+![](images/12.png)
 
 ### enctype 属性
 
-## 如何提交表单
+表单中还具有一个比较特殊的属性 enctype，该属性定义提交表单时所生成的请求中的 Content-Type 的 HTTP 数据头的值。
 
-### submit() 方法
+enctype 属性的默认值为 `application/x-www-form-urlencoded`，该值的含义就是表示“这是已编码为URL参数的表单数据”。还具有另一个值为 `multipart/form-data`，可用于实现文件上传功能。如果想要实现文件上传功能，需要同时满足以下三个条件:
+
+- 将表单的 method 属性值设置为 POST
+- 将表单的 enctype 属性值设置为 `multipart/form-data`
+- 表单组件中至少定义一个文件域
+
+可以通过如下示例代码测试文件上传功能:
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="file" name="data">
+    <input type="submit" value="上传">
+</form>
+```
+
+上述示例代码运行后的结果如下图所示:
+
+![](images/13.png)
+
+如上图所示，可以看到 HTTP 请求协议中的 `Content-Type` 的值被修改为 `multipart/form-data`，这是由表单的 enctype 属性的值决定的。一旦设置为 `multipart/form-data` 值之后，表示表单提交的是二进制数据，可用于实现文件上传。
+
+## 如何提交表单
 
 ### submit 事件
 
-## 扩展内容
+以上述方式提交表单时，会触发 submit 事件。可以通过如下示例代码进行测试:
 
-### 跨站脚本攻击(XSS)
+```html
+<form action="" method="post">
+    <input type="text" name="data">
+    <input type="submit" value="提交">
+</form>
+<script>
+    var myform = document.forms[0];
+    myform.addEventListener('submit',function(){
+        alert('表单被提交......');
+    });
+</script>
+```
 
-### 跨站点请求伪造攻击(CSRF)
+上述示例代码运行后的效果如下图:
+
+![](images/14.png)
+
+如果在 submit 事件的处理函数中通过 event 事件对象的 preventDefault() 方法可以阻止表单提交。换句话讲，在该事件的处理函数中可以完成表单验证的逻辑内容。
+
+### submit() 方法
+
+表单还提供了 submit() 方法用于提交表单，使用该方法时允许表单内使用任一普通按钮即可（并非提交按钮）。
+
+可以通过如下示例代码测试 submit() 方法的使用:
+
+```html
+<form action="" method="post">
+    <input type="text" name="data">
+    <input id="btn" type="button" value="提交">
+</form>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click',function(){
+        var myform = document.forms[1];
+        myform.submit();
+    });
+</script>
+```
+
+上述示例代码中，首先为按钮注册 click 事件，然后在 click 事件的处理函数中获取表单并调用 submit() 方法，最终实现提交表单的功能。
+
+> **注意:** 使用 submit() 方法提交表单不会触发 submit 事件。
+
