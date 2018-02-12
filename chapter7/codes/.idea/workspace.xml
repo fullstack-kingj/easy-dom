@@ -17,8 +17,8 @@
       <file leaf-file-name="09_表单验证.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09_表单验证.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="1296">
+              <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -115,23 +115,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.10_提交表单示例.html">
+  <component name="RunManager" selected="JavaScript Debug.09_表单验证.html">
     <configuration name="06_操作剪切板.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/codes/06_操作剪切板.html" />
     <configuration name="07_HTMLSelectElement对象.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/codes/07_HTMLSelectElement对象.html" />
     <configuration name="08_HTMLOptionElement对象.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/codes/08_HTMLOptionElement对象.html" />
+    <configuration name="09_表单验证.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/codes/09_表单验证.html" />
     <configuration name="10_提交表单示例.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/codes/10_提交表单示例.html" />
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.06_操作剪切板.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.07_HTMLSelectElement对象.html" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.08_HTMLOptionElement对象.html" />
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.10_提交表单示例.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.09_表单验证.html" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.10_提交表单示例.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.08_HTMLOptionElement对象.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.07_HTMLSelectElement对象.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.06_操作剪切板.html" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.09_表单验证.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.10_提交表单示例.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.08_HTMLOptionElement对象.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.07_HTMLSelectElement对象.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.06_操作剪切板.html" />
       </list>
     </recent_temporary>
   </component>
@@ -153,12 +156,12 @@
       <workItem from="1515902698379" duration="6586000" />
       <workItem from="1517738867530" duration="3901000" />
       <workItem from="1517802205831" duration="5745000" />
-      <workItem from="1518238537515" duration="291000" />
+      <workItem from="1518238537515" duration="3566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16648000" />
+    <option name="totallyTimeSpent" value="19923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -173,7 +176,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21176471" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21176471" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -308,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09_表单验证.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="1296">
+          <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding />
         </state>
       </provider>
